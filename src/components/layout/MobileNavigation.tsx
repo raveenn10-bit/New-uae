@@ -74,6 +74,7 @@ export function MobileNavigation({
           {/* Navigation Links */}
           <nav
             aria-label="Mobile Menu"
+            data-lenis-prevent
             className="flex flex-1 flex-col justify-center gap-2 overflow-y-auto px-6 py-8"
           >
             {navLinks.map((link, index) => {

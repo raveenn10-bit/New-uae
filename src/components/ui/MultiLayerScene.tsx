@@ -124,6 +124,8 @@ export function MultiLayerScene({
           {layer.src && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
+                loading="lazy"
+                decoding="async"
               src={layer.src}
               alt={layer.alt || ''}
               className={cn('h-full w-full object-cover', layer.imgClassName)}
