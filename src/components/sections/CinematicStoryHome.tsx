@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Flame, HardHat, ShieldCheck, Sparkles } from 'lucide-react';
 import { companyConfig } from '@/config/company';
 import { confirmedServices } from '@/config/services';
 import { confirmedIndustries } from '@/config/industries';
@@ -54,6 +54,33 @@ const manpowerGroups: ('All' | ManpowerGroup)[] = [
   'Site & Turnaround Support',
 ];
 
+const workforceRoles = [
+  {
+    title: 'Certified Welders',
+    tag: 'Pipeline & Fabrication',
+    image: '/images/pipeline-welding.webp',
+    alt: 'Certified pipeline welder at work',
+    copy: 'Coded welders and fabricators for pipelines, spools and structural steel.',
+    icon: Flame,
+  },
+  {
+    title: 'Oil & Gas Engineers',
+    tag: 'Engineering & Supervision',
+    image: '/images/industrial-engineers.webp',
+    alt: 'Oil and gas engineers reviewing site plans',
+    copy: 'Field, mechanical and site-coordination engineers who keep projects on spec.',
+    icon: HardHat,
+  },
+  {
+    title: 'HSE Safety Officers',
+    tag: 'Health, Safety & Environment',
+    image: '/images/industrial-safety-team.webp',
+    alt: 'HSE safety officers on an industrial site',
+    copy: 'Safety professionals embedding risk awareness into every shift.',
+    icon: ShieldCheck,
+  },
+];
+
 export function CinematicStoryHome() {
   const storyRef = useRef<HTMLDivElement>(null);
   const techPinRef = useRef<HTMLElement>(null);
@@ -94,7 +121,7 @@ export function CinematicStoryHome() {
         });
       });
 
-      // Chapter 02 — People Behind the Power: bidirectional depth movement on cutouts
+      // Chapter 02 — People Behind the Power: bidirectional depth movement on role cards
       gsap.fromTo(
         '.ch2-worker-center',
         { y: 60, scale: 0.94 },
@@ -266,32 +293,52 @@ export function CinematicStoryHome() {
             </p>
           </div>
 
-          {/* 3-Layer Transparent Cutout Stage */}
-          <div className="relative mx-auto mt-10 grid max-w-5xl grid-cols-3 items-end gap-2 sm:gap-6">
-            <div className="ch2-worker-side relative flex justify-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/scenes/02-workforce/welder-cutout.webp"
-                alt="PETROCON Certified Pipeline Welder"
-                className="max-h-[420px] w-auto object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.65)]"
-              />
-            </div>
-            <div className="ch2-worker-center relative z-10 flex justify-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/scenes/02-workforce/engineer-cutout.webp"
-                alt="PETROCON Oil & Gas Engineer"
-                className="max-h-[490px] w-auto object-contain drop-shadow-[0_30px_40px_rgba(32,127,186,0.35)]"
-              />
-            </div>
-            <div className="ch2-worker-side relative flex justify-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/scenes/02-workforce/safety-officer-cutout.webp"
-                alt="PETROCON HSE Safety Officer"
-                className="max-h-[420px] w-auto object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.65)]"
-              />
-            </div>
+          {/* Workforce role cards with depth parallax */}
+          <div className="relative mx-auto mt-14 grid max-w-6xl grid-cols-1 items-end gap-5 sm:grid-cols-3 sm:gap-6">
+            {workforceRoles.map((role, i) => {
+              const RoleIcon = role.icon;
+              const center = i === 1;
+              return (
+                <div
+                  key={role.title}
+                  className={center ? 'ch2-worker-center relative z-10' : 'ch2-worker-side relative'}
+                >
+                <Reveal delay={i * 0.12}>
+                  <article
+                    className={cn(
+                      'group relative overflow-hidden rounded-[2rem] border bg-petro-navy-mid shadow-2xl transition-transform duration-500 hover:-translate-y-2',
+                      center
+                        ? 'aspect-[4/3] border-petro-blue/50 shadow-petro-blue/20 sm:aspect-[3/4]'
+                        : 'aspect-[4/3] border-white/15 sm:aspect-[3/3.6]'
+                    )}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={role.image}
+                      alt={role.alt}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-[#071827]/30 to-transparent" />
+                    <span className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white backdrop-blur-md transition-all duration-500 group-hover:rotate-[-8deg] group-hover:bg-petro-blue">
+                      <RoleIcon className="h-6 w-6" aria-hidden="true" />
+                    </span>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-left">
+                      <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+                        {role.tag}
+                      </p>
+                      <h3 className="mt-1 font-heading text-xl font-bold text-white sm:text-2xl">
+                        {role.title}
+                      </h3>
+                      <p className="mt-1.5 max-h-0 overflow-hidden text-sm text-slate-300 opacity-0 transition-all duration-500 group-hover:max-h-24 group-hover:opacity-100">
+                        {role.copy}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
