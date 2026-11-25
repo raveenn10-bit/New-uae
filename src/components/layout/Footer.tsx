@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Mail, MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 import { companyConfig } from '@/config/company';
 import { confirmedServices } from '@/config/services';
+import { Reveal } from '@/components/ui/motion/Reveal';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,6 +19,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-petro-navy text-slate-300">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-12 2xl:px-16 lg:py-16">
+        <Reveal>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Brand & Intro */}
           <div className="lg:col-span-4">
@@ -157,6 +159,7 @@ export function Footer() {
             )}
           </div>
         </div>
+        </Reveal>
 
         {/* Bottom Legal & Developer Credit */}
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-slate-400 sm:flex-row sm:items-center">

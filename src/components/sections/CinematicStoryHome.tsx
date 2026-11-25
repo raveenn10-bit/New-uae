@@ -25,6 +25,7 @@ import { KineticText, ScrambleEyebrow } from '@/components/ui/KineticText';
 import { Reveal, Stagger, StaggerItem } from '@/components/ui/motion/Reveal';
 import { ScrollTextReveal } from '@/components/ui/motion/ScrollTextReveal';
 import { Magnetic } from '@/components/ui/motion/Magnetic';
+import { ParallaxImage } from '@/components/ui/motion/ParallaxImage';
 import { getIcon, hseIcons, industryIcons, manpowerGroupIcons } from '@/components/ui/Icon';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
@@ -262,10 +263,14 @@ export function CinematicStoryHome() {
         className="relative min-h-[95svh] overflow-hidden border-t border-white/10 bg-[#101820] py-24 text-white"
       >
         {/* Background Industrial Facility */}
-        <div
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/scenes/02-workforce/bg-facility.webp"
+          alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-25"
-          style={{ backgroundImage: "url('/scenes/02-workforce/bg-facility.webp')" }}
+          loading="lazy"
+          decoding="async"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div
           aria-hidden="true"
@@ -418,6 +423,8 @@ export function CinematicStoryHome() {
                     <div className="relative aspect-[16/10] w-full overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
+                loading="lazy"
+                decoding="async"
                         src={current.image}
                         alt={current.imageAlt}
                         className="h-full w-full object-cover transition-all duration-500"
@@ -485,6 +492,8 @@ export function CinematicStoryHome() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
+                loading="lazy"
+                decoding="async"
                   src={ind.image}
                   alt={ind.imageAlt}
                   className="absolute inset-0 h-full w-full object-cover opacity-55 transition-transform duration-1000 group-hover:scale-110"
@@ -526,20 +535,15 @@ export function CinematicStoryHome() {
       >
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-6">
-            <Reveal direction="right" className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/scenes/05-safety/safety-team.webp"
-                alt="PETROCON HSE Safety Team"
-                className="h-full w-full object-cover"
-              />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
+              <ParallaxImage src="/scenes/05-safety/safety-team.webp" alt="PETROCON HSE Safety Team" />
               <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#101820]/75 px-4 py-3 backdrop-blur-md">
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-petro-blue">
                   <ShieldCheck className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <span className="text-sm font-semibold">Safety is non-negotiable</span>
               </div>
-            </Reveal>
+            </div>
           </div>
           <div className="lg:col-span-6">
             <ScrambleEyebrow text="Chapter 06 · Safety & Professionalism" className="text-[#B8D0DE]" />
@@ -701,7 +705,7 @@ export function CinematicStoryHome() {
         </div>
       </section>
 
-      <section id="request-manpower" className="scroll-mt-24 border-t border-slate-200 bg-petro-light-grey py-20">
+      <section id="request-manpower" className="border-t border-slate-200 bg-petro-light-grey py-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow={t.sections.quoteEyebrow}

@@ -3,6 +3,7 @@ import { ArrowRight, PhoneCall } from 'lucide-react';
 import { KineticText } from '@/components/ui/KineticText';
 import { Magnetic } from '@/components/ui/motion/Magnetic';
 import { Reveal } from '@/components/ui/motion/Reveal';
+import { ParallaxImage } from '@/components/ui/motion/ParallaxImage';
 
 /** Rounded closing call-to-action card with animated rings and kinetic headline. */
 export function CTABand() {
@@ -10,13 +11,9 @@ export function CTABand() {
     <section className="bg-white px-4 py-20 sm:px-6 lg:px-12 2xl:px-16">
       <Reveal direction="scale" className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-petro-navy px-6 py-16 text-white sm:px-12 lg:px-16 lg:py-20">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/offshore-platform.webp"
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-20"
-            loading="lazy"
-          />
+          <div className="absolute inset-0 opacity-20">
+            <ParallaxImage src="/images/offshore-platform.webp" alt="" reveal={false} strength={14} />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-petro-navy via-petro-navy/85 to-petro-steel-blue/40" />
           <div
             aria-hidden="true"

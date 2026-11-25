@@ -8,6 +8,8 @@ import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { SmoothScrollProvider } from '@/components/ui/SmoothScrollProvider';
 import { LanguageProvider } from '@/components/ui/LanguageContext';
+import { ScrollProgress } from '@/components/ui/motion/ScrollProgress';
+import { CursorFollower } from '@/components/ui/motion/CursorFollower';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -96,10 +98,12 @@ export default function RootLayout({
         />
         <LanguageProvider>
           <SmoothScrollProvider>
+            <ScrollProgress />
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
             <WhatsAppButton />
+            <CursorFollower />
           </SmoothScrollProvider>
         </LanguageProvider>
       </body>

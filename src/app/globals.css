@@ -15,6 +15,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     /* Fluid root size: everything in rem (type, spacing, widths) scales up on large screens */
     font-size: 16px;
     -webkit-tap-highlight-color: transparent;
@@ -182,4 +183,31 @@
   .pipe-flow-y {
     animation: none !important;
   }
+}
+
+/* Lenis smooth scroll (recommended base styles) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Slow Ken Burns drift on page banners */
+@keyframes banner-kenburns {
+  from { transform: scale(1.12) translate3d(0, 0, 0); }
+  to { transform: scale(1) translate3d(-1.5%, -1%, 0); }
+}
+.banner-kenburns {
+  animation: banner-kenburns 14s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .banner-kenburns { animation: none; }
 }

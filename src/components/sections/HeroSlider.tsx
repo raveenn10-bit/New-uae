@@ -110,15 +110,17 @@ export function HeroSlider() {
               scale: { duration: SLIDE_MS / 1000 + 1.5, ease: 'linear' },
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={slide.desktop}
-              alt={slide.alt}
-              className="hidden h-full w-full object-cover md:block"
-              fetchPriority={index === 0 ? 'high' : 'auto'}
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={slide.mobile} alt={slide.alt} className="h-full w-full object-cover md:hidden" />
+            <picture>
+              <source media="(min-width: 768px)" srcSet={slide.desktop} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={slide.mobile}
+                alt={slide.alt}
+                className="h-full w-full object-cover"
+                fetchPriority={index === 0 ? 'high' : 'auto'}
+                decoding={index === 0 ? 'sync' : 'async'}
+              />
+            </picture>
           </motion.div>
         </AnimatePresence>
       </motion.div>

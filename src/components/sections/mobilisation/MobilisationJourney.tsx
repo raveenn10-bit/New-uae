@@ -10,6 +10,7 @@ import { useLanguage } from '@/components/ui/LanguageContext';
 import { KineticText, ScrambleEyebrow } from '@/components/ui/KineticText';
 import { Magnetic } from '@/components/ui/motion/Magnetic';
 import { cn } from '@/lib/utils';
+import { smoothScrollTo } from '@/components/ui/SmoothScrollProvider';
 import { FINAL_KEY, STEP_KEYS, activeStepFor, mobilisationSteps } from './data';
 import type { SceneInputs } from './MobilisationScene';
 
@@ -93,6 +94,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
   const [active, setActive] = useState(0);
   const [complete, setComplete] = useState(false);
   const [inView, setInView] = useState(false);
+  const [armed, setArmed] = useState(false);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -119,6 +121,17 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
       rootMargin: '200px 0px',
     });
     io.observe(wrap);
+    // Download the 3D engine + textures only when the reader gets close.
+    const armIo = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setArmed(true);
+          armIo.disconnect();
+        }
+      },
+      { rootMargin: '1600px 0px' }
+    );
+    armIo.observe(wrap);
 
     const onMove = (e: PointerEvent) => {
       pointer.current.x = (e.clientX / window.innerWidth) * 2 - 1;
@@ -132,6 +145,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
     return () => {
       st.kill();
       io.disconnect();
+      armIo.disconnect();
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('load', onLoad);
     };
@@ -142,7 +156,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
     if (!wrap) return;
     const top = wrap.getBoundingClientRect().top + window.scrollY;
     const distance = wrap.offsetHeight - window.innerHeight;
-    window.scrollTo({ top: top + distance * STEP_KEYS[i], behavior: 'smooth' });
+    smoothScrollTo(top + distance * STEP_KEYS[i]);
   };
 
   const step = mobilisationSteps[active];
@@ -176,7 +190,9 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
             )}
           >
             <SceneBoundary onError={onFail}>
-              <MobilisationScene inputs={inputs} running={inView} onReady={() => setReady(true)} />
+              {armed && (
+                <MobilisationScene inputs={inputs} running={inView} onReady={() => setReady(true)} />
+              )}
             </SceneBoundary>
           </div>
         </div>

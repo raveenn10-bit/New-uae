@@ -427,7 +427,7 @@ export function HomeContent() {
       {/* 9. B2B REQUEST MANPOWER / FREE QUOTE SECTION */}
       <section
         id="request-manpower"
-        className="gsap-reveal-section scroll-mt-24 border-t border-slate-200 bg-petro-light-grey py-20 lg:py-28"
+        className="gsap-reveal-section border-t border-slate-200 bg-petro-light-grey py-20 lg:py-28"
       >
         <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading

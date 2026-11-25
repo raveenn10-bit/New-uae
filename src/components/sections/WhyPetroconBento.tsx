@@ -59,6 +59,8 @@ export function WhyPetroconBento() {
                   <>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
+                loading="lazy"
+                decoding="async"
                       src="/scenes/06-final/corporate-team.webp"
                       alt=""
                       className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25 transition-transform duration-[1.2s] group-hover:scale-105"
