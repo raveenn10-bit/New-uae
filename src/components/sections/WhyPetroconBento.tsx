@@ -28,7 +28,7 @@ function trackPointer(e: React.PointerEvent<HTMLElement>) {
 export function WhyPetroconBento() {
   return (
     <section className="bg-white py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
         <SectionHeading
           eyebrow="Why PETROCON"
           title="Built on Discipline, Delivered with Precision"
@@ -78,7 +78,7 @@ export function WhyPetroconBento() {
                   <span
                     className={cn(
                       'font-heading text-sm font-bold',
-                      featured ? 'text-[#7CC4F0]' : 'text-slate-300'
+                      featured ? 'text-[#B8D0DE]' : 'text-slate-300'
                     )}
                   >
                     0{i + 1}
@@ -104,7 +104,7 @@ export function WhyPetroconBento() {
                   <ArrowUpRight
                     className={cn(
                       'mt-4 h-5 w-5 -translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100',
-                      featured ? 'text-[#7CC4F0]' : 'text-petro-blue'
+                      featured ? 'text-[#B8D0DE]' : 'text-petro-blue'
                     )}
                     aria-hidden="true"
                   />

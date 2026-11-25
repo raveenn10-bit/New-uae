@@ -48,7 +48,7 @@ export function Breadcrumbs({
                 {isLast ? (
                   <span
                     aria-current="page"
-                    className={theme === 'dark' ? 'text-[#7CC4F0]' : 'text-petro-blue'}
+                    className={theme === 'dark' ? 'text-[#B8D0DE]' : 'text-petro-blue'}
                   >
                     {item.label}
                   </span>

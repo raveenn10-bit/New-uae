@@ -232,23 +232,23 @@ export function CinematicStoryHome() {
       <div data-chapter-index="0">
         <HeroSlider />
       </div>
-      <div className="bg-[#071827]">
+      <div className="bg-[#101820]">
         <StatsBand />
       </div>
 
       {/* Story intro — scroll-scrubbed statement */}
-      <section id="story-intro" className="relative overflow-hidden bg-[#071827] px-4 py-24 text-white sm:px-6 lg:px-8 lg:py-36">
+      <section id="story-intro" className="relative overflow-hidden bg-[#101820] px-4 py-24 text-white sm:px-6 lg:px-12 2xl:px-16 lg:py-36">
         <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 opacity-[0.05]" />
         <div className="relative mx-auto max-w-5xl">
           <Reveal>
-            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
               <Sparkles className="h-3.5 w-3.5" aria-hidden="true" /> Our Story
             </p>
           </Reveal>
           <ScrollTextReveal
             text="Every refinery, pipeline and offshore deck depends on the people who keep it running. PETROCON exists to put skilled, safety-ready hands on those sites, exactly when operations need them."
             highlight={['refinery', 'pipeline', 'offshore', 'skilled', 'safety-ready']}
-            className="text-3xl leading-[1.25] sm:text-4xl lg:text-[3.25rem]"
+            className="text-3xl leading-[1.25] sm:text-4xl sm:leading-[1.25] lg:text-[3.25rem] lg:leading-[1.2]"
           />
         </div>
       </section>
@@ -259,7 +259,7 @@ export function CinematicStoryHome() {
       <section
         id="chapter-02"
         data-chapter-index="1"
-        className="relative min-h-[95svh] overflow-hidden border-t border-white/10 bg-[#071827] py-24 text-white"
+        className="relative min-h-[95svh] overflow-hidden border-t border-white/10 bg-[#101820] py-24 text-white"
       >
         {/* Background Industrial Facility */}
         <div
@@ -269,13 +269,13 @@ export function CinematicStoryHome() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#071827] via-[#071827]/70 to-[#071827]"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#101820] via-[#101820]/70 to-[#101820]"
         />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           {/* Giant Editorial Typography Behind/Beside Cutout Workers */}
           <div className="text-center">
-            <ScrambleEyebrow text="Chapter 02 · People Behind the Power" className="text-[#7CC4F0]" />
+            <ScrambleEyebrow text="Chapter 02 · People Behind the Power" className="text-[#B8D0DE]" />
             <KineticText
               as="h2"
               text="EXPERT PEOPLE."
@@ -285,7 +285,7 @@ export function CinematicStoryHome() {
               as="p"
               text="POWERFUL SOLUTIONS."
               delay={0.25}
-              className="font-heading text-4xl font-bold tracking-industrial text-[#7CC4F0] sm:text-6xl lg:text-7xl"
+              className="font-heading text-4xl font-bold tracking-industrial text-[#B8D0DE] sm:text-6xl lg:text-7xl"
             />
             <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-base">
               Disciplined engineers, certified welders, mechanical technicians, and HSE safety
@@ -319,12 +319,12 @@ export function CinematicStoryHome() {
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-[#071827]/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/30 to-transparent" />
                     <span className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white backdrop-blur-md transition-all duration-500 group-hover:rotate-[-8deg] group-hover:bg-petro-blue">
                       <RoleIcon className="h-6 w-6" aria-hidden="true" />
                     </span>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-left">
-                      <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+                      <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
                         {role.tag}
                       </p>
                       <h3 className="mt-1 font-heading text-xl font-bold text-white sm:text-2xl">
@@ -352,12 +352,12 @@ export function CinematicStoryHome() {
         id="chapter-03"
         ref={techPinRef}
         data-chapter-index="2"
-        className="relative border-t border-white/10 bg-[#0D263D] py-20 text-white lg:flex lg:min-h-[100svh] lg:items-center"
+        className="relative border-t border-white/10 bg-[#354B60] py-20 text-white lg:flex lg:min-h-[100svh] lg:items-center"
       >
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <ScrambleEyebrow text="Chapter 03 · Technical Excellence" className="text-[#7CC4F0]" />
+              <ScrambleEyebrow text="Chapter 03 · Technical Excellence" className="text-[#B8D0DE]" />
               <KineticText
                 as="h2"
                 mode="words"
@@ -376,7 +376,7 @@ export function CinematicStoryHome() {
                     className={cn(
                       'group flex w-full items-center justify-between rounded-2xl border px-4 py-3 text-left transition-all duration-300',
                       activeTechIdx === idx
-                        ? 'border-petro-blue bg-petro-blue/20 text-white'
+                        ? 'border-petro-silver/60 bg-white/10 text-white'
                         : 'border-white/10 bg-white/5 text-slate-300 hover:border-white/25'
                     )}
                   >
@@ -384,12 +384,12 @@ export function CinematicStoryHome() {
                       <span
                         className={cn(
                           'flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300',
-                          activeTechIdx === idx ? 'bg-petro-blue text-white' : 'bg-white/10 text-[#7CC4F0] group-hover:bg-white/15'
+                          activeTechIdx === idx ? 'bg-petro-steel-blue text-petro-navy' : 'bg-white/10 text-[#B8D0DE] group-hover:bg-white/15'
                         )}
                       >
                         <SrvIcon className="h-5 w-5" aria-hidden="true" />
                       </span>
-                      <span className="font-heading text-xs font-bold text-[#7CC4F0]">
+                      <span className="font-heading text-xs font-bold text-[#B8D0DE]">
                         {srv.code}
                       </span>
                       <span className="font-heading text-sm font-semibold">{srv.title}</span>
@@ -413,7 +413,7 @@ export function CinematicStoryHome() {
                 return (
                   <div
                     key={current.id}
-                    className="animate-[tech-in_0.6s_cubic-bezier(0.22,1,0.36,1)] overflow-hidden rounded-[2rem] border border-white/15 bg-[#071827] shadow-2xl"
+                    className="animate-[tech-in_0.6s_cubic-bezier(0.22,1,0.36,1)] overflow-hidden rounded-[2rem] border border-white/15 bg-[#101820] shadow-2xl"
                   >
                     <div className="relative aspect-[16/10] w-full overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -422,8 +422,8 @@ export function CinematicStoryHome() {
                         alt={current.imageAlt}
                         className="h-full w-full object-cover transition-all duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-transparent to-transparent" />
-                      <span className="absolute bottom-4 left-6 font-heading text-xs font-bold uppercase tracking-widecaps text-[#7CC4F0]">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-transparent" />
+                      <span className="absolute bottom-4 left-6 font-heading text-xs font-bold uppercase tracking-widecaps text-[#B8D0DE]">
                         Division {current.code}
                       </span>
                     </div>
@@ -437,7 +437,7 @@ export function CinematicStoryHome() {
                       <div className="mt-6 flex flex-wrap gap-3">
                         <Link
                           href={`/services#${current.slug}`}
-                          className="inline-flex items-center gap-2 rounded-xl bg-petro-blue px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white hover:bg-petro-blue-dark"
+                          className="inline-flex items-center gap-2 rounded-xl bg-petro-steel-blue px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-petro-navy hover:bg-petro-silver"
                         >
                           <span>Explore Service</span>
                           <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -459,10 +459,10 @@ export function CinematicStoryHome() {
         id="chapter-04"
         ref={industriesPinRef}
         data-chapter-index="3"
-        className="relative overflow-hidden border-t border-white/10 bg-[#071827] py-20 text-white lg:flex lg:min-h-[100svh] lg:flex-col lg:justify-center"
+        className="relative overflow-hidden border-t border-white/10 bg-[#101820] py-20 text-white lg:flex lg:min-h-[100svh] lg:flex-col lg:justify-center"
       >
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <ScrambleEyebrow text="Chapter 04 · Industries We Serve" className="text-[#7CC4F0]" />
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
+          <ScrambleEyebrow text="Chapter 04 · Industries We Serve" className="text-[#B8D0DE]" />
           <KineticText
             as="h2"
             mode="words"
@@ -489,7 +489,7 @@ export function CinematicStoryHome() {
                   alt={ind.imageAlt}
                   className="absolute inset-0 h-full w-full object-cover opacity-55 transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-[#071827]/55 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/55 to-transparent" />
                 <div className="absolute left-6 right-6 top-6 z-10 flex items-center justify-between">
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white backdrop-blur-md transition-all duration-500 group-hover:rotate-[-8deg] group-hover:bg-petro-blue">
                     <IndIcon className="h-7 w-7" aria-hidden="true" />
@@ -497,7 +497,7 @@ export function CinematicStoryHome() {
                   <span className="font-heading text-5xl font-bold text-white/15">0{indIdx + 1}</span>
                 </div>
                 <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
-                  <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+                  <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
                     {ind.tagline}
                   </p>
                   <h3 className="mt-1 font-heading text-2xl font-bold text-white sm:text-3xl">
@@ -522,7 +522,7 @@ export function CinematicStoryHome() {
       <section
         id="chapter-06"
         data-chapter-index="5"
-        className="relative overflow-hidden bg-[#071827] py-20 text-white lg:py-28"
+        className="relative overflow-hidden bg-[#101820] py-20 text-white lg:py-28"
       >
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-6">
@@ -533,7 +533,7 @@ export function CinematicStoryHome() {
                 alt="PETROCON HSE Safety Team"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#071827]/75 px-4 py-3 backdrop-blur-md">
+              <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#101820]/75 px-4 py-3 backdrop-blur-md">
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-petro-blue">
                   <ShieldCheck className="h-5 w-5" aria-hidden="true" />
                 </span>
@@ -542,7 +542,7 @@ export function CinematicStoryHome() {
             </Reveal>
           </div>
           <div className="lg:col-span-6">
-            <ScrambleEyebrow text="Chapter 06 · Safety & Professionalism" className="text-[#7CC4F0]" />
+            <ScrambleEyebrow text="Chapter 06 · Safety & Professionalism" className="text-[#B8D0DE]" />
             <KineticText
               as="h2"
               mode="words"
@@ -559,9 +559,9 @@ export function CinematicStoryHome() {
                 <StaggerItem
                   as="li"
                   key={p.title}
-                  className="group flex items-start gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-[#7CC4F0]/40 hover:bg-white/10"
+                  className="group flex items-start gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-[#B8D0DE]/40 hover:bg-white/10"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-petro-blue/20 text-[#7CC4F0] transition-all duration-300 group-hover:bg-petro-blue group-hover:text-white">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-petro-blue/20 text-[#B8D0DE] transition-all duration-300 group-hover:bg-petro-blue group-hover:text-white">
                     <PIcon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>
@@ -599,13 +599,13 @@ export function CinematicStoryHome() {
               id: 'ch7-scrim',
               role: 'atmosphere',
               customContent: (
-                <div className="h-full w-full bg-gradient-to-t from-[#071827] via-[#071827]/70 to-[#071827]/50" />
+                <div className="h-full w-full bg-gradient-to-t from-[#101820] via-[#101820]/70 to-[#101820]/50" />
               ),
             },
           ]}
         >
-          <div className="mx-auto max-w-5xl px-4 py-24 text-center sm:px-6 lg:px-8">
-            <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+          <div className="mx-auto max-w-5xl px-4 py-24 text-center sm:px-6 lg:px-12 2xl:px-16">
+            <p className="text-xs font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
               Chapter 07 &middot; Your Workforce Partner
             </p>
             <KineticText
@@ -618,7 +618,7 @@ export function CinematicStoryHome() {
               <Magnetic>
                 <a
                   href="#request-manpower"
-                  className="group relative inline-flex min-h-[56px] items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-blue px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-petro-blue-dark"
+                  className="group relative inline-flex min-h-[56px] items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-steel-blue px-8 py-3.5 text-sm font-semibold text-petro-navy shadow-xl hover:bg-petro-silver"
                 >
                   <span className="btn-shine" aria-hidden="true" />
                   <span>{t.hero.ctaRequest}</span>
@@ -640,7 +640,7 @@ export function CinematicStoryHome() {
           15 CONFIGURABLE MANPOWER CATEGORIES + B2B QUOTATION FORM + FAQ
          ===================================================================== */}
       <section className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow={t.sections.manpowerEyebrow}
             title={t.sections.manpowerTitle}
@@ -702,7 +702,7 @@ export function CinematicStoryHome() {
       </section>
 
       <section id="request-manpower" className="scroll-mt-24 border-t border-slate-200 bg-petro-light-grey py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow={t.sections.quoteEyebrow}
             title={t.sections.quoteTitle}
@@ -718,7 +718,7 @@ export function CinematicStoryHome() {
       <ClientsCarousel />
 
       <section className="bg-white py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" align="center" />
           <div className="mt-8">
             <FAQAccordion items={faqData} />

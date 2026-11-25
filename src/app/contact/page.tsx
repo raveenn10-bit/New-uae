@@ -45,7 +45,7 @@ export default function ContactPage({
       />
 
       <section className="bg-petro-light-grey py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="space-y-6 lg:col-span-4">
               <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">

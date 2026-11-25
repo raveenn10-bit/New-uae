@@ -59,7 +59,7 @@ export function ServiceCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-petro-navy/80 via-petro-navy/20 to-transparent" />
         <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-          <span className="font-heading text-xs font-bold tracking-widest text-[#7CC4F0]">
+          <span className="font-heading text-xs font-bold tracking-widest text-[#B8D0DE]">
             {service.code}
           </span>
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-petro-blue text-white shadow-md">

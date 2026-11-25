@@ -95,8 +95,8 @@ export function MobileNavigation({
                     className={cn(
                       'flex min-h-[56px] items-center justify-between rounded-xl border-b border-white/10 px-3 py-3 font-heading text-2xl font-semibold tracking-industrial transition-colors',
                       isActive
-                        ? 'text-[#7CC4F0]'
-                        : 'text-white hover:text-[#7CC4F0]'
+                        ? 'text-[#B8D0DE]'
+                        : 'text-white hover:text-[#B8D0DE]'
                     )}
                   >
                     <span>{link.label}</span>

@@ -72,7 +72,7 @@ export function VantaNetBackground({ className = '' }: { className?: string }) {
     <div
       ref={containerRef}
       aria-hidden="true"
-      className={`pointer-events-none absolute inset-0 bg-[#071827] opacity-85 ${className}`}
+      className={`pointer-events-none absolute inset-0 bg-[#101820] opacity-85 ${className}`}
     />
   );
 }

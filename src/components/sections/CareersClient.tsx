@@ -142,7 +142,7 @@ export function CareersClient() {
       {/* Active Vacancies Section — Only shown if verified vacancies exist */}
       {confirmedVacancies.length > 0 && (
         <section className="border-b border-slate-200 bg-white py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
             <SectionHeading
               eyebrow="Open Positions"
               title="Confirmed Active Vacancies"
@@ -176,7 +176,7 @@ export function CareersClient() {
 
       {/* Trade Categories Filter & Grid */}
       <section className="bg-petro-light-grey py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading
               eyebrow="Talent Pool &amp; Trade Categories"
@@ -222,7 +222,7 @@ export function CareersClient() {
 
       {/* Career Enquiry Form */}
       <section id="career-enquiry-form" className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow="Candidate Registration"
             title="Career Enquiry Form"

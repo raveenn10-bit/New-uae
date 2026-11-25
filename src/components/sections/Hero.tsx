@@ -78,23 +78,23 @@ export function Hero() {
           <source src="/videos/hero-mobile.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071827]/94 via-[#071827]/74 to-[#071827]/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-transparent to-[#071827]/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101820]/94 via-[#101820]/74 to-[#101820]/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/50" />
       </div>
 
       {/* Hero Foreground Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-12 2xl:px-16">
         <div className="max-w-3xl">
-          <div className="hero-reveal mb-5 inline-flex items-center gap-3 rounded-xl border border-[#7CC4F0]/30 bg-[#071827]/65 px-3.5 py-1.5 backdrop-blur-sm">
+          <div className="hero-reveal mb-5 inline-flex items-center gap-3 rounded-xl border border-[#B8D0DE]/30 bg-[#101820]/65 px-3.5 py-1.5 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-petro-blue" />
-            <span className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+            <span className="text-[11px] font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
               {t.hero.badge}
             </span>
           </div>
 
           <h1 className="hero-reveal font-heading text-4xl font-bold leading-[1.08] tracking-industrial text-white sm:text-5xl lg:text-[3.85rem]">
             {t.hero.headlineLine1}
-            <span className="mt-1 block text-[#7CC4F0]">{t.hero.headlineLine2}</span>
+            <span className="mt-1 block text-[#B8D0DE]">{t.hero.headlineLine2}</span>
           </h1>
 
           <p className="hero-reveal mt-5 max-w-2xl font-heading text-lg font-medium text-slate-200 sm:text-2xl">
@@ -123,7 +123,7 @@ export function Hero() {
 
             <Link
               href="/services"
-              className="inline-flex min-h-[52px] items-center justify-center px-4 py-3.5 text-sm font-semibold text-[#7CC4F0] transition-colors hover:text-white"
+              className="inline-flex min-h-[52px] items-center justify-center px-4 py-3.5 text-sm font-semibold text-[#B8D0DE] transition-colors hover:text-white"
             >
               <span>{t.hero.ctaServices} &rarr;</span>
             </Link>

@@ -160,11 +160,11 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
         {/* Quiet engineering backdrop */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 [background-image:radial-gradient(rgba(7,24,39,0.09)_1px,transparent_1px)] [background-size:28px_28px]"
+          className="absolute inset-0 [background-image:radial-gradient(rgba(16, 24, 32,0.09)_1px,transparent_1px)] [background-size:28px_28px]"
         />
         <div
           aria-hidden="true"
-          className="absolute right-[-10%] top-1/2 h-[80vh] w-[70vw] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(32,127,186,0.10),transparent_65%)]"
+          className="absolute right-[-10%] top-1/2 h-[80vh] w-[70vw] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(115, 148, 172,0.10),transparent_65%)]"
         />
 
         {/* 3D stage */}
@@ -183,7 +183,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
 
         {/* Editorial column */}
         <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 pt-20 lg:px-8">
-          <div className="w-full max-w-[460px]">
+          <div className="w-full max-w-[30rem]">
             <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-petro-blue/20 bg-petro-blue-light px-3.5 py-1.5 text-petro-blue">
               <span className="h-2 w-2 rounded-full bg-petro-blue" />
               <ScrambleEyebrow text={EYEBROW} className="font-sans" />
@@ -203,7 +203,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
               <div className="absolute left-4 right-4 top-4 h-1 rounded-full bg-slate-200">
                 <div
                   ref={fillRef}
-                  className="pipe-flow h-full rounded-full bg-petro-blue"
+                  className="pipe-flow h-full rounded-full bg-petro-steel-blue"
                   style={{ width: '0%' }}
                 />
               </div>
@@ -220,7 +220,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
                         i < active || complete
                           ? 'border-petro-blue bg-petro-blue text-white'
                           : i === active
-                            ? 'scale-110 border-petro-blue bg-white text-petro-blue shadow-[0_0_0_6px_rgba(32,127,186,0.15)]'
+                            ? 'scale-110 border-petro-blue bg-white text-petro-blue shadow-[0_0_0_6px_rgba(115, 148, 172,0.15)]'
                             : 'border-slate-200 bg-white text-slate-400 hover:border-petro-blue/50'
                       )}
                     >
@@ -255,7 +255,7 @@ function CinematicJourney({ onFail }: { onFail: () => void }) {
                     </>
                   ) : (
                     <div className="flex gap-5">
-                      <span className="font-heading text-6xl font-bold leading-none text-transparent [-webkit-text-stroke:1.5px_#207FBA]">
+                      <span className="font-heading text-6xl font-bold leading-none text-transparent [-webkit-text-stroke:1.5px_#354B60]">
                         {step.step}
                       </span>
                       <div>
@@ -358,9 +358,9 @@ function TimelineJourney() {
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 [background-image:radial-gradient(rgba(7,24,39,0.08)_1px,transparent_1px)] [background-size:26px_26px]"
+        className="absolute inset-0 [background-image:radial-gradient(rgba(16, 24, 32,0.08)_1px,transparent_1px)] [background-size:26px_26px]"
       />
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-6 lg:px-12 2xl:px-16">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-petro-blue/20 bg-petro-blue-light px-3.5 py-1.5 text-petro-blue">
             <span className="h-2 w-2 rounded-full bg-petro-blue" />
@@ -381,7 +381,7 @@ function TimelineJourney() {
             aria-hidden="true"
             className="absolute bottom-6 top-6 w-1 rounded-full bg-slate-200 ltr:left-[19px] rtl:right-[19px] md:left-1/2 md:-translate-x-1/2 md:rtl:right-auto"
           >
-            <div className="tl-rail-fill pipe-flow-y h-full w-full rounded-full bg-petro-blue" />
+            <div className="tl-rail-fill pipe-flow-y h-full w-full rounded-full bg-petro-steel-blue" />
           </div>
           <ol className="space-y-14 md:space-y-20">
 
@@ -405,7 +405,7 @@ function TimelineJourney() {
                     decoding="async"
                     width={760}
                     height={680}
-                    className="tl-visual mx-auto h-auto w-full max-w-[440px] drop-shadow-[0_30px_40px_rgba(7,24,39,0.12)] will-change-transform"
+                    className="tl-visual mx-auto h-auto w-full max-w-[28rem] drop-shadow-[0_30px_40px_rgba(16, 24, 32,0.12)] will-change-transform"
                   />
                 </div>
                 <div className={cn(flip && 'md:order-1 md:text-end')}>

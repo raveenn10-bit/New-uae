@@ -61,7 +61,7 @@ export default function ServicesPage() {
         aria-label="Service Categories"
         className="sticky top-[68px] z-30 border-b border-slate-200 bg-white/95 backdrop-blur-md"
       >
-        <div className="no-scrollbar mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
+        <div className="no-scrollbar mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-12 2xl:px-16">
           {confirmedServices.map((service) => (
             <a
               key={service.id}
@@ -84,7 +84,7 @@ export default function ServicesPage() {
               id={service.slug}
               className="scroll-mt-32 py-16 lg:py-24"
             >
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
                 <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
                   <div
                     className={`lg:col-span-6 ${

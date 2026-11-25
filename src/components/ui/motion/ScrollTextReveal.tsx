@@ -56,7 +56,7 @@ export function ScrollTextReveal({ text, highlight = [], className }: ScrollText
         return (
           <span
             key={`${word}-${i}`}
-            className={cn('str-word inline-block will-change-transform', accent && 'text-[#7CC4F0]')}
+            className={cn('str-word inline-block will-change-transform', accent && 'text-[#B8D0DE]')}
           >
             {word}
             {' '}
