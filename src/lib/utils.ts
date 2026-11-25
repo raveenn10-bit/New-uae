@@ -7,7 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function buildWhatsAppUrl(message: string): string | null {
-  const { verified, numberE164 } = companyConfig.contact.whatsapp;
+  const { verified, numberE164 }: { verified: boolean; numberE164: string } =
+    companyConfig.contact.whatsapp;
   if (!verified || !numberE164) return null;
   const cleanNumber = numberE164.replace(/[^0-9]/g, '');
   if (!cleanNumber) return null;
