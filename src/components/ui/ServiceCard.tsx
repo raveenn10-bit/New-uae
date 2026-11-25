@@ -37,7 +37,7 @@ export function ServiceCard({
   return (
     <article
       className={cn(
-        'group flex flex-col overflow-hidden rounded-sm border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue/40 hover:shadow-industrial',
+        'group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue/40 hover:shadow-industrial',
         className
       )}
     >
@@ -62,7 +62,7 @@ export function ServiceCard({
           <span className="font-heading text-xs font-bold tracking-widest text-[#7CC4F0]">
             {service.code}
           </span>
-          <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-petro-blue text-white shadow-md">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-petro-blue text-white shadow-md">
             <Icon className="h-4 w-4" aria-hidden="true" />
           </span>
         </div>

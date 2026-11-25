@@ -106,7 +106,7 @@ export function HomeContent() {
             />
             <a
               href="#request-manpower"
-              className="inline-flex min-h-[46px] shrink-0 items-center justify-center gap-2 rounded-sm bg-petro-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+              className="inline-flex min-h-[46px] shrink-0 items-center justify-center gap-2 rounded-xl bg-petro-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
             >
               <span>{t.hero.ctaQuote}</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -121,7 +121,7 @@ export function HomeContent() {
                 type="button"
                 onClick={() => setSelectedGroup(group)}
                 className={cn(
-                  'min-h-[42px] shrink-0 rounded-sm border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors',
+                  'min-h-[42px] shrink-0 rounded-xl border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors',
                   selectedGroup === group
                     ? 'border-petro-navy bg-petro-navy text-white'
                     : 'border-slate-300 bg-petro-light-grey/60 text-petro-navy hover:border-petro-blue'
@@ -139,7 +139,7 @@ export function HomeContent() {
                 {[...filteredManpower, ...filteredManpower].map((cat, idx) => (
                   <article
                     key={`${cat.id}-mob-${idx}`}
-                    className="flex w-[264px] shrink-0 flex-col overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm"
+                    className="flex w-[264px] shrink-0 flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
                   >
                     <div className="relative aspect-[3/4] w-full bg-petro-navy">
                       <Image
@@ -150,7 +150,7 @@ export function HomeContent() {
                         className="object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-petro-navy/85 via-transparent to-transparent" />
-                      <span className="absolute bottom-3 left-3 rounded-sm bg-petro-blue/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                      <span className="absolute bottom-3 left-3 rounded-xl bg-petro-blue/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
                         {cat.group}
                       </span>
                     </div>
@@ -181,7 +181,7 @@ export function HomeContent() {
             {filteredManpower.map((cat) => (
               <article
                 key={cat.id}
-                className="group flex flex-col overflow-hidden rounded-sm border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue/50 hover:shadow-industrial"
+                className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue/50 hover:shadow-industrial"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-petro-navy">
                   <Image
@@ -238,7 +238,7 @@ export function HomeContent() {
               <div className="mt-8">
                 <Link
                   href="/about"
-                  className="group inline-flex min-h-[48px] items-center gap-2 rounded-sm bg-petro-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue"
+                  className="group inline-flex min-h-[48px] items-center gap-2 rounded-xl bg-petro-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue"
                 >
                   <span>Discover Our Corporate Profile</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -247,7 +247,7 @@ export function HomeContent() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-sm bg-petro-navy shadow-industrial-lg">
+              <div className="relative overflow-hidden rounded-xl bg-petro-navy shadow-industrial-lg">
                 <div className="relative aspect-[3/4] w-full md:aspect-[4/3]">
                   <Image
                     src="/images/mobile/industrial-engineers-mobile.webp"
@@ -361,9 +361,9 @@ export function HomeContent() {
               return (
                 <div
                   key={item.id}
-                  className="group rounded-sm border border-white/10 bg-[#071827]/80 p-6 backdrop-blur-sm transition-all hover:border-petro-blue hover:bg-[#0D263D]/90"
+                  className="group rounded-xl border border-white/10 bg-[#071827]/80 p-6 backdrop-blur-sm transition-all hover:border-petro-blue hover:bg-[#0D263D]/90"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-petro-blue/15 text-[#7CC4F0] group-hover:bg-petro-blue group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petro-blue/15 text-[#7CC4F0] group-hover:bg-petro-blue group-hover:text-white">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h3 className="mt-5 font-heading text-lg font-bold text-white">{item.title}</h3>
@@ -380,7 +380,7 @@ export function HomeContent() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="order-2 lg:order-1 lg:col-span-6">
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm bg-petro-navy shadow-industrial-lg md:aspect-[4/3]">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-petro-navy shadow-industrial-lg md:aspect-[4/3]">
                 <Image
                   src="/images/mobile/industrial-safety-team-mobile.webp"
                   alt="PETROCON HSE safety officers"
@@ -407,7 +407,7 @@ export function HomeContent() {
                 {companyConfig.hse.pillars.map((pillar) => (
                   <li
                     key={pillar.title}
-                    className="flex items-start gap-3.5 rounded-sm border border-slate-200 bg-petro-light-grey/60 p-4"
+                    className="flex items-start gap-3.5 rounded-xl border border-slate-200 bg-petro-light-grey/60 p-4"
                   >
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-petro-blue" aria-hidden="true" />
                     <div>
@@ -462,7 +462,7 @@ export function HomeContent() {
       {/* 12. FINAL CTA */}
       <section className="bg-petro-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-start justify-between gap-8 rounded-sm border border-white/10 bg-gradient-to-br from-petro-navy-mid to-petro-navy p-8 sm:p-12 lg:flex-row lg:items-center">
+          <div className="flex flex-col items-start justify-between gap-8 rounded-xl border border-white/10 bg-gradient-to-br from-petro-navy-mid to-petro-navy p-8 sm:p-12 lg:flex-row lg:items-center">
             <div className="max-w-2xl">
               <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
                 Partner With PETROCON
@@ -477,14 +477,14 @@ export function HomeContent() {
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <a
                 href="#request-manpower"
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-sm bg-petro-blue px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-petro-blue px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
               >
                 <span>{t.hero.ctaRequest}</span>
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-petro-navy"
+                className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-petro-navy"
               >
                 {t.hero.ctaContact}
               </Link>

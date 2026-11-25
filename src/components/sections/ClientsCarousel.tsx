@@ -28,7 +28,7 @@ export function ClientsCarousel() {
             {[...approvedClients, ...approvedClients].map((client, idx) => (
               <div
                 key={`${client.id}-${idx}`}
-                className="flex h-20 w-44 shrink-0 items-center justify-center rounded-sm border border-slate-100 bg-petro-light-grey/60 px-6 py-4"
+                className="flex h-20 w-44 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-petro-light-grey/60 px-6 py-4"
               >
                 <div className="relative h-12 w-32">
                   <Image

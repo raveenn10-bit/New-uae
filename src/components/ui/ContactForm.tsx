@@ -95,7 +95,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
     <form
       onSubmit={(e) => e.preventDefault()}
       noValidate
-      className="space-y-5 rounded-sm border border-slate-200 bg-white p-6 shadow-industrial sm:p-8"
+      className="space-y-5 rounded-xl border border-slate-200 bg-white p-6 shadow-industrial sm:p-8"
     >
       <div className="border-b border-slate-100 pb-4">
         <h3 className="font-heading text-xl font-bold tracking-industrial text-petro-navy">
@@ -117,7 +117,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
             value={form.fullName}
             onChange={(e) => setForm({ ...form, fullName: e.target.value })}
             placeholder="Your full name"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
           />
           {errors.fullName && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -137,7 +137,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
             value={form.companyName}
             onChange={(e) => setForm({ ...form, companyName: e.target.value })}
             placeholder="Organization name"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
           />
           {errors.companyName && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -157,7 +157,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             placeholder="name@company.com"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
           />
           {errors.email && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -177,7 +177,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
             placeholder="+971 XX XXX XXXX"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
           />
           {errors.phone && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -196,7 +196,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
           id="contact-service"
           value={form.requiredService}
           onChange={(e) => setForm({ ...form, requiredService: e.target.value })}
-          className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
+          className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
         >
           {confirmedServices.map((s) => (
             <option key={s.id} value={s.title}>
@@ -223,7 +223,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           placeholder="Outline your project scope, required trades, location, or mobilization timeline..."
-          className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
+          className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-petro-black transition-colors focus:border-petro-blue focus:outline-none"
         />
         {errors.message && (
           <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -239,7 +239,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
           <button
             type="button"
             onClick={handleWhatsApp}
-            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5d]"
+            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5d]"
           >
             <MessageSquare className="h-4 w-4" aria-hidden="true" />
             <span>Send via WhatsApp</span>
@@ -250,7 +250,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
           <button
             type="button"
             onClick={handleEmail}
-            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-sm bg-petro-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-petro-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
             <span>Open Email Enquiry</span>
@@ -260,7 +260,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
         <button
           type="button"
           onClick={handleCopySummary}
-          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm border border-slate-300 bg-petro-light-grey px-5 py-3 text-sm font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-white"
+          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-slate-300 bg-petro-light-grey px-5 py-3 text-sm font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-white"
         >
           {copied ? (
             <>
@@ -277,7 +277,7 @@ export function ContactForm({ defaultService = '' }: { defaultService?: string }
       </div>
 
       {!isWhatsAppReady && !isEmailReady && (
-        <p className="rounded-sm border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
+        <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
           Direct WhatsApp and email dispatch will activate automatically once PETROCON&apos;s
           verified contact channels are configured in <code>src/config/company.ts</code>. You can
           validate and copy your structured enquiry summary above.

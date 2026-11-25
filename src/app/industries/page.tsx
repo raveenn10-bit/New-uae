@@ -43,7 +43,7 @@ export default function IndustriesPage() {
               <article
                 key={industry.id}
                 id={industry.slug}
-                className="scroll-mt-28 overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm"
+                className="scroll-mt-28 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
               >
                 <div className="grid lg:grid-cols-12">
                   <div className="relative aspect-[3/4] w-full bg-petro-navy md:aspect-[16/10] lg:col-span-5 lg:aspect-auto lg:min-h-[340px]">
@@ -97,7 +97,7 @@ export default function IndustriesPage() {
                           <Link
                             key={srv.id}
                             href={`/services#${srv.slug}`}
-                            className="rounded-sm bg-petro-light-grey px-3 py-1.5 text-xs font-semibold text-petro-navy transition-colors hover:bg-petro-blue hover:text-white"
+                            className="rounded-xl bg-petro-light-grey px-3 py-1.5 text-xs font-semibold text-petro-navy transition-colors hover:bg-petro-blue hover:text-white"
                           >
                             {srv.title}
                           </Link>

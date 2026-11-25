@@ -11,10 +11,10 @@ export function CareerCard({
   onSelect: (category: TradeCategory) => void;
 }) {
   return (
-    <article className="group flex flex-col justify-between rounded-sm border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-petro-blue/50 hover:shadow-industrial">
+    <article className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-petro-blue/50 hover:shadow-industrial">
       <div>
         <div className="flex items-center justify-between gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-sm bg-petro-light-grey px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-petro-navy">
+          <span className="inline-flex items-center gap-1.5 rounded-xl bg-petro-light-grey px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-petro-navy">
             <Briefcase className="h-3 w-3 text-petro-blue" aria-hidden="true" />
             {category.division}
           </span>

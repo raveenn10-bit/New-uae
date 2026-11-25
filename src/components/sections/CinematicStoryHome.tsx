@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, CheckCircle2, FileText, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { companyConfig } from '@/config/company';
 import { confirmedServices } from '@/config/services';
 import { confirmedIndustries } from '@/config/industries';
@@ -15,6 +15,17 @@ import {
 } from '@/config/manpower';
 import { faqData } from '@/config/faq';
 import { MultiLayerScene } from '@/components/ui/MultiLayerScene';
+import { HeroSlider } from '@/components/sections/HeroSlider';
+import { StatsBand } from '@/components/sections/StatsBand';
+import { StoryJourney } from '@/components/sections/StoryJourney';
+import { WhyPetroconBento } from '@/components/sections/WhyPetroconBento';
+import { DisciplineMarquee } from '@/components/sections/DisciplineMarquee';
+import { CTABand } from '@/components/sections/CTABand';
+import { KineticText, ScrambleEyebrow } from '@/components/ui/KineticText';
+import { Reveal, Stagger, StaggerItem } from '@/components/ui/motion/Reveal';
+import { ScrollTextReveal } from '@/components/ui/motion/ScrollTextReveal';
+import { Magnetic } from '@/components/ui/motion/Magnetic';
+import { getIcon, hseIcons, industryIcons, manpowerGroupIcons } from '@/components/ui/Icon';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
 import { ManpowerRequestForm } from '@/components/ui/ManpowerRequestForm';
@@ -152,22 +163,6 @@ export function CinematicStoryHome() {
         });
       }
 
-      // Chapter 05 — SVG Technical Progress Line (Bidirectional Scrub)
-      gsap.fromTo(
-        '.ch5-progress-line',
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          transformOrigin: isRtl ? 'right center' : 'left center',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '#chapter-05',
-            start: 'top 70%',
-            end: 'bottom 60%',
-            scrub: 0.6,
-          },
-        }
-      );
     }, root);
 
     return () => ctx.revert();
@@ -189,7 +184,7 @@ export function CinematicStoryHome() {
           >
             <span
               className={cn(
-                'rounded-sm bg-petro-navy/85 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-opacity',
+                'rounded-xl bg-petro-navy/85 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-opacity',
                 activeChapter === idx ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
               )}
             >
@@ -207,92 +202,29 @@ export function CinematicStoryHome() {
         ))}
       </aside>
 
-      {/* =====================================================================
-          CHAPTER 01 — POWERING INDUSTRY (Multi-Layer 2.5D Oil Refinery)
-         ===================================================================== */}
       <div data-chapter-index="0">
-        <MultiLayerScene
-          id="chapter-01"
-          minHeightClass="min-h-[100svh]"
-          className="flex items-center text-white"
-          layers={[
-            {
-              id: 'ch1-bg',
-              role: 'background',
-              src: '/scenes/01-refinery/bg-refinery.webp',
-              alt: 'Golden-hour oil refinery aerial view',
-              yParallax: 10,
-              scaleTo: 1.14,
-              pointerDepth: -10,
-              className: 'hidden md:block -inset-8',
-            },
-            {
-              id: 'ch1-bg-mob',
-              role: 'background',
-              src: '/scenes/01-refinery/mobile-refinery.webp',
-              alt: 'Vertical oil refinery towers at twilight',
-              yParallax: 8,
-              scaleTo: 1.08,
-              className: 'block md:hidden -inset-4',
-            },
-            {
-              id: 'ch1-atmosphere',
-              role: 'atmosphere',
-              customContent: (
-                <div className="h-full w-full bg-gradient-to-r from-[#071827]/92 via-[#071827]/65 to-[#071827]/25" />
-              ),
-            },
-            {
-              id: 'ch1-fg-pipes',
-              role: 'foreground',
-              src: '/scenes/01-refinery/fg-pipelines.webp',
-              alt: 'Foreground industrial steel pipelines',
-              yParallax: -18,
-              scaleTo: 1.18,
-              pointerDepth: 16,
-              className: 'hidden md:block -inset-x-6 -bottom-10 top-auto h-[58%] opacity-80',
-              imgClassName: 'object-contain object-bottom',
-            },
-          ]}
-        >
-          <div className="mx-auto w-full max-w-7xl px-4 pb-24 pt-36 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <div className="mb-5 inline-flex items-center gap-3 rounded-sm border border-[#7CC4F0]/35 bg-[#071827]/70 px-3.5 py-1.5 backdrop-blur-sm">
-                <span className="h-2 w-2 rounded-full bg-petro-blue" />
-                <span className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
-                  Chapter 01 &middot; {t.hero.badge}
-                </span>
-              </div>
-              <h1 className="font-heading text-4xl font-bold leading-[1.04] tracking-industrial text-white sm:text-6xl lg:text-[4.25rem]">
-                POWERING THE OIL &amp; GAS INDUSTRY
-              </h1>
-              <p className="mt-5 font-heading text-lg font-medium text-[#7CC4F0] sm:text-2xl">
-                {t.hero.supporting}
-              </p>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-200 sm:text-base">
-                Skilled technical manpower, mechanical works, electrical &amp; instrumentation, and
-                turnaround support engineered for energy infrastructure.
-              </p>
-              <div className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap">
-                <a
-                  href="#request-manpower"
-                  className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-sm bg-petro-blue px-7 py-3.5 text-sm font-semibold text-white shadow-xl transition-colors hover:bg-petro-blue-dark"
-                >
-                  <span>{t.hero.ctaRequest}</span>
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-sm border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-petro-navy"
-                >
-                  <FileText className="h-4 w-4" aria-hidden="true" />
-                  <span>{t.hero.ctaQuote}</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </MultiLayerScene>
+        <HeroSlider />
       </div>
+      <div className="bg-[#071827]">
+        <StatsBand />
+      </div>
+
+      {/* Story intro — scroll-scrubbed statement */}
+      <section id="story-intro" className="relative overflow-hidden bg-[#071827] px-4 py-24 text-white sm:px-6 lg:px-8 lg:py-36">
+        <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 opacity-[0.05]" />
+        <div className="relative mx-auto max-w-5xl">
+          <Reveal>
+            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+              <Sparkles className="h-3.5 w-3.5" aria-hidden="true" /> Our Story
+            </p>
+          </Reveal>
+          <ScrollTextReveal
+            text="Every refinery, pipeline and offshore deck depends on the people who keep it running. PETROCON exists to put skilled, safety-ready hands on those sites, exactly when operations need them."
+            highlight={['refinery', 'pipeline', 'offshore', 'skilled', 'safety-ready']}
+            className="text-3xl leading-[1.25] sm:text-4xl lg:text-[3.25rem]"
+          />
+        </div>
+      </section>
 
       {/* =====================================================================
           CHAPTER 02 — PEOPLE BEHIND THE POWER (Transparent Foreground Cutouts)
@@ -316,13 +248,18 @@ export function CinematicStoryHome() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Giant Editorial Typography Behind/Beside Cutout Workers */}
           <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
-              Chapter 02 &middot; People Behind the Power
-            </p>
-            <h2 className="mt-3 font-heading text-4xl font-bold tracking-industrial text-white sm:text-6xl lg:text-7xl">
-              EXPERT PEOPLE.
-              <span className="block text-[#7CC4F0]">POWERFUL SOLUTIONS.</span>
-            </h2>
+            <ScrambleEyebrow text="Chapter 02 · People Behind the Power" className="text-[#7CC4F0]" />
+            <KineticText
+              as="h2"
+              text="EXPERT PEOPLE."
+              className="mt-3 font-heading text-4xl font-bold tracking-industrial text-white sm:text-6xl lg:text-7xl"
+            />
+            <KineticText
+              as="p"
+              text="POWERFUL SOLUTIONS."
+              delay={0.25}
+              className="font-heading text-4xl font-bold tracking-industrial text-[#7CC4F0] sm:text-6xl lg:text-7xl"
+            />
             <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-base">
               Disciplined engineers, certified welders, mechanical technicians, and HSE safety
               officers mobilized with safety readiness and technical precision.
@@ -359,6 +296,8 @@ export function CinematicStoryHome() {
         </div>
       </section>
 
+      <DisciplineMarquee />
+
       {/* =====================================================================
           CHAPTER 03 — TECHNICAL EXCELLENCE (Pinned Scroll-Driven Services)
          ===================================================================== */}
@@ -371,35 +310,53 @@ export function CinematicStoryHome() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
-                Chapter 03 &middot; Technical Excellence
-              </p>
-              <h2 className="mt-3 font-heading text-3xl font-bold tracking-industrial sm:text-4xl">
-                Multi-Discipline Industrial Execution
-              </h2>
+              <ScrambleEyebrow text="Chapter 03 · Technical Excellence" className="text-[#7CC4F0]" />
+              <KineticText
+                as="h2"
+                mode="words"
+                text="Multi-Discipline Industrial Execution"
+                className="mt-3 font-heading text-3xl font-bold tracking-industrial sm:text-4xl"
+              />
 
               <div className="mt-8 space-y-2">
-                {featuredServices.map((srv, idx) => (
+                {featuredServices.map((srv, idx) => {
+                  const SrvIcon = getIcon(srv.iconName);
+                  return (
                   <button
                     key={srv.id}
                     type="button"
                     onClick={() => setActiveTechIdx(idx)}
                     className={cn(
-                      'flex w-full items-center justify-between rounded-sm border px-4 py-3 text-left transition-all',
+                      'group flex w-full items-center justify-between rounded-2xl border px-4 py-3 text-left transition-all duration-300',
                       activeTechIdx === idx
                         ? 'border-petro-blue bg-petro-blue/20 text-white'
                         : 'border-white/10 bg-white/5 text-slate-300 hover:border-white/25'
                     )}
                   >
                     <span className="flex items-center gap-3">
+                      <span
+                        className={cn(
+                          'flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300',
+                          activeTechIdx === idx ? 'bg-petro-blue text-white' : 'bg-white/10 text-[#7CC4F0] group-hover:bg-white/15'
+                        )}
+                      >
+                        <SrvIcon className="h-5 w-5" aria-hidden="true" />
+                      </span>
                       <span className="font-heading text-xs font-bold text-[#7CC4F0]">
                         {srv.code}
                       </span>
                       <span className="font-heading text-sm font-semibold">{srv.title}</span>
                     </span>
-                    <ArrowRight className="h-4 w-4 opacity-70" aria-hidden="true" />
+                    <ArrowRight
+                      className={cn(
+                        'h-4 w-4 transition-transform duration-300',
+                        activeTechIdx === idx ? 'translate-x-0 opacity-100' : '-translate-x-1 opacity-50'
+                      )}
+                      aria-hidden="true"
+                    />
                   </button>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
@@ -407,7 +364,10 @@ export function CinematicStoryHome() {
               {(() => {
                 const current = featuredServices[activeTechIdx] || featuredServices[0];
                 return (
-                  <div className="overflow-hidden rounded-sm border border-white/15 bg-[#071827] shadow-2xl">
+                  <div
+                    key={current.id}
+                    className="animate-[tech-in_0.6s_cubic-bezier(0.22,1,0.36,1)] overflow-hidden rounded-[2rem] border border-white/15 bg-[#071827] shadow-2xl"
+                  >
                     <div className="relative aspect-[16/10] w-full overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -430,7 +390,7 @@ export function CinematicStoryHome() {
                       <div className="mt-6 flex flex-wrap gap-3">
                         <Link
                           href={`/services#${current.slug}`}
-                          className="inline-flex items-center gap-2 rounded-sm bg-petro-blue px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white hover:bg-petro-blue-dark"
+                          className="inline-flex items-center gap-2 rounded-xl bg-petro-blue px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white hover:bg-petro-blue-dark"
                         >
                           <span>Explore Service</span>
                           <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -455,12 +415,13 @@ export function CinematicStoryHome() {
         className="relative overflow-hidden border-t border-white/10 bg-[#071827] py-20 text-white lg:flex lg:min-h-[100svh] lg:flex-col lg:justify-center"
       >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
-            Chapter 04 &middot; Industries We Serve
-          </p>
-          <h2 className="mt-2 font-heading text-3xl font-bold tracking-industrial sm:text-4xl">
-            Built for High-Specification Sectors
-          </h2>
+          <ScrambleEyebrow text="Chapter 04 · Industries We Serve" className="text-[#7CC4F0]" />
+          <KineticText
+            as="h2"
+            mode="words"
+            text="Built for High-Specification Sectors"
+            className="mt-2 font-heading text-3xl font-bold tracking-industrial sm:text-4xl"
+          />
         </div>
 
         <div className="mt-10 overflow-x-auto px-4 lg:overflow-visible lg:px-8">
@@ -468,19 +429,27 @@ export function CinematicStoryHome() {
             ref={industriesTrackRef}
             className="flex w-max gap-6 will-change-transform"
           >
-            {confirmedIndustries.slice(0, 5).map((ind) => (
+            {confirmedIndustries.slice(0, 5).map((ind, indIdx) => {
+              const IndIcon = industryIcons[ind.slug] ?? ShieldCheck;
+              return (
               <article
                 key={ind.id}
-                className="relative flex h-[430px] w-[300px] shrink-0 flex-col justify-end overflow-hidden rounded-sm border border-white/15 bg-petro-navy-mid p-6 sm:w-[420px] lg:h-[470px] lg:w-[540px]"
+                className="group relative flex h-[430px] w-[300px] shrink-0 flex-col justify-end overflow-hidden rounded-[2rem] border border-white/15 bg-petro-navy-mid p-6 sm:w-[420px] lg:h-[470px] lg:w-[540px]"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={ind.image}
                   alt={ind.imageAlt}
-                  className="absolute inset-0 h-full w-full object-cover opacity-55 transition-transform duration-700 hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-cover opacity-55 transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-[#071827]/55 to-transparent" />
-                <div className="relative z-10">
+                <div className="absolute left-6 right-6 top-6 z-10 flex items-center justify-between">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white backdrop-blur-md transition-all duration-500 group-hover:rotate-[-8deg] group-hover:bg-petro-blue">
+                    <IndIcon className="h-7 w-7" aria-hidden="true" />
+                  </span>
+                  <span className="font-heading text-5xl font-bold text-white/15">0{indIdx + 1}</span>
+                </div>
+                <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                   <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
                     {ind.tagline}
                   </p>
@@ -490,49 +459,15 @@ export function CinematicStoryHome() {
                   <p className="mt-2 text-sm text-slate-200">{ind.description}</p>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* =====================================================================
-          CHAPTER 05 — WORKFORCE MOBILISATION (4-Step Process + SVG Line)
-         ===================================================================== */}
-      <section
-        id="chapter-05"
-        data-chapter-index="4"
-        className="border-t border-slate-200 bg-white py-20 text-petro-navy lg:py-28"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Chapter 05 · Workforce Mobilisation"
-            title={t.sections.howItWorksTitle}
-            description={t.sections.howItWorksDesc}
-          />
-          <div className="relative mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div
-              aria-hidden="true"
-              className="ch5-progress-line pointer-events-none absolute left-8 right-8 top-9 hidden h-[3px] bg-petro-blue lg:block"
-            />
-            {howItWorksSteps.map((s) => (
-              <div
-                key={s.step}
-                className="relative rounded-sm border border-slate-200 bg-petro-light-grey/60 p-6 transition-all hover:border-petro-blue hover:bg-white hover:shadow-industrial"
-              >
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-sm bg-petro-navy font-heading text-base font-bold text-white">
-                  {s.step}
-                </div>
-                <h3 className="mt-5 font-heading text-lg font-bold text-petro-navy">
-                  {isRtl ? s.titleAr : s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-petro-steel">
-                  {isRtl ? s.descriptionAr : s.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StoryJourney />
+
+      <WhyPetroconBento />
 
       {/* =====================================================================
           CHAPTER 06 — SAFETY & PROFESSIONALISM (Dark HSE Scene)
@@ -544,42 +479,52 @@ export function CinematicStoryHome() {
       >
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-6">
-            <div className="overflow-hidden rounded-sm border border-white/10 shadow-2xl">
+            <Reveal direction="right" className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/scenes/05-safety/safety-team.webp"
                 alt="PETROCON HSE Safety Team"
                 className="h-full w-full object-cover"
               />
-            </div>
+              <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#071827]/75 px-4 py-3 backdrop-blur-md">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-petro-blue">
+                  <ShieldCheck className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span className="text-sm font-semibold">Safety is non-negotiable</span>
+              </div>
+            </Reveal>
           </div>
           <div className="lg:col-span-6">
-            <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-petro-blue text-white">
-              <ShieldCheck className="h-6 w-6" aria-hidden="true" />
-            </div>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
-              Chapter 06 &middot; Safety &amp; Professionalism
-            </p>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-industrial sm:text-4xl">
-              {companyConfig.hse.headline}
-            </h2>
+            <ScrambleEyebrow text="Chapter 06 · Safety & Professionalism" className="text-[#7CC4F0]" />
+            <KineticText
+              as="h2"
+              mode="words"
+              text={companyConfig.hse.headline}
+              className="mt-2 font-heading text-3xl font-bold tracking-industrial sm:text-4xl"
+            />
             <p className="mt-4 text-sm leading-relaxed text-slate-300 sm:text-base">
               {companyConfig.hse.description}
             </p>
-            <ul className="mt-6 space-y-3">
-              {companyConfig.hse.pillars.map((p) => (
-                <li
+            <Stagger as="ul" className="mt-6 space-y-3">
+              {companyConfig.hse.pillars.map((p, pIdx) => {
+                const PIcon = hseIcons[pIdx] ?? ShieldCheck;
+                return (
+                <StaggerItem
+                  as="li"
                   key={p.title}
-                  className="flex items-start gap-3 rounded-sm border border-white/10 bg-white/5 p-3.5"
+                  className="group flex items-start gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-[#7CC4F0]/40 hover:bg-white/10"
                 >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#7CC4F0]" aria-hidden="true" />
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-petro-blue/20 text-[#7CC4F0] transition-all duration-300 group-hover:bg-petro-blue group-hover:text-white">
+                    <PIcon className="h-5 w-5" aria-hidden="true" />
+                  </span>
                   <div>
                     <p className="font-heading text-sm font-bold text-white">{p.title}</p>
                     <p className="mt-0.5 text-xs text-slate-300">{p.description}</p>
                   </div>
-                </li>
-              ))}
-            </ul>
+                </StaggerItem>
+                );
+              })}
+            </Stagger>
           </div>
         </div>
       </section>
@@ -616,20 +561,26 @@ export function CinematicStoryHome() {
             <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
               Chapter 07 &middot; Your Workforce Partner
             </p>
-            <h2 className="mt-4 font-heading text-4xl font-bold leading-tight tracking-industrial text-white sm:text-6xl">
-              YOUR WORKFORCE. YOUR PROJECTS. OUR COMMITMENT.
-            </h2>
+            <KineticText
+              as="h2"
+              mode="words"
+              text="YOUR WORKFORCE. YOUR PROJECTS. OUR COMMITMENT."
+              className="mt-4 font-heading text-4xl font-bold leading-tight tracking-industrial text-white sm:text-6xl"
+            />
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-              <a
-                href="#request-manpower"
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-sm bg-petro-blue px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-petro-blue-dark"
-              >
-                <span>{t.hero.ctaRequest}</span>
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
+              <Magnetic>
+                <a
+                  href="#request-manpower"
+                  className="group relative inline-flex min-h-[56px] items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-blue px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-petro-blue-dark"
+                >
+                  <span className="btn-shine" aria-hidden="true" />
+                  <span>{t.hero.ctaRequest}</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </a>
+              </Magnetic>
               <Link
                 href="/contact"
-                className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white hover:text-petro-navy"
+                className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white hover:text-petro-navy"
               >
                 {t.hero.ctaQuote}
               </Link>
@@ -655,7 +606,7 @@ export function CinematicStoryHome() {
                 type="button"
                 onClick={() => setSelectedGroup(g)}
                 className={cn(
-                  'min-h-[40px] shrink-0 rounded-sm border px-4 py-2 text-xs font-semibold uppercase tracking-wider',
+                  'min-h-[42px] shrink-0 rounded-full border px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all duration-300',
                   selectedGroup === g
                     ? 'border-petro-navy bg-petro-navy text-white'
                     : 'border-slate-300 bg-petro-light-grey/60 text-petro-navy hover:border-petro-blue'
@@ -665,13 +616,19 @@ export function CinematicStoryHome() {
               </button>
             ))}
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {filteredManpower.map((cat) => (
-              <article
+          <Stagger key={selectedGroup} className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {filteredManpower.map((cat) => {
+              const GIcon = manpowerGroupIcons[cat.group];
+              return (
+              <StaggerItem
+                as="article"
                 key={cat.id}
-                className="flex flex-col justify-between rounded-sm border border-slate-200 bg-petro-light-grey/40 p-4 transition-colors hover:border-petro-blue hover:bg-white"
+                className="group flex flex-col justify-between rounded-3xl border border-slate-200 bg-petro-light-grey/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue/40 hover:bg-white hover:shadow-industrial"
               >
                 <div>
+                  <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-petro-blue shadow-sm transition-all duration-300 group-hover:bg-petro-blue group-hover:text-white">
+                    <GIcon className="h-5 w-5" aria-hidden="true" />
+                  </span>
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-petro-blue">
                     {cat.group}
                   </span>
@@ -688,11 +645,12 @@ export function CinematicStoryHome() {
                   className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-petro-blue"
                 >
                   <span>Request</span>
-                  <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                  <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </a>
-              </article>
-            ))}
-          </div>
+              </StaggerItem>
+              );
+            })}
+          </Stagger>
         </div>
       </section>
 
@@ -720,6 +678,8 @@ export function CinematicStoryHome() {
           </div>
         </div>
       </section>
+
+      <CTABand />
     </div>
   );
 }

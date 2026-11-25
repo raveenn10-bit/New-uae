@@ -66,7 +66,7 @@ export default function ServicesPage() {
             <a
               key={service.id}
               href={`#${service.slug}`}
-              className="shrink-0 rounded-sm border border-slate-200 bg-petro-light-grey px-3.5 py-2 text-xs font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-petro-blue hover:text-white"
+              className="shrink-0 rounded-xl border border-slate-200 bg-petro-light-grey px-3.5 py-2 text-xs font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-petro-blue hover:text-white"
             >
               {service.code} &middot; {service.title}
             </a>
@@ -91,7 +91,7 @@ export default function ServicesPage() {
                       isReversed ? 'lg:order-2' : 'lg:order-1'
                     }`}
                   >
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm bg-petro-navy shadow-industrial md:aspect-[4/3]">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-petro-navy shadow-industrial md:aspect-[4/3]">
                       <Image
                         src={service.mobileImage}
                         alt={service.imageAlt}
@@ -147,7 +147,7 @@ export default function ServicesPage() {
                         <Link
                           key={ind}
                           href="/industries"
-                          className="rounded-sm bg-petro-light-grey px-2.5 py-1 text-xs font-medium text-petro-navy transition-colors hover:bg-petro-blue hover:text-white"
+                          className="rounded-xl bg-petro-light-grey px-2.5 py-1 text-xs font-medium text-petro-navy transition-colors hover:bg-petro-blue hover:text-white"
                         >
                           {ind}
                         </Link>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                     <div className="mt-8">
                       <Link
                         href={`/contact?service=${encodeURIComponent(service.title)}`}
-                        className="inline-flex min-h-[48px] items-center gap-2 rounded-sm bg-petro-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue"
+                        className="inline-flex min-h-[48px] items-center gap-2 rounded-xl bg-petro-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue"
                       >
                         <span>Enquire About {service.title}</span>
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -184,7 +184,7 @@ export default function ServicesPage() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex min-h-[48px] shrink-0 items-center gap-2 rounded-sm bg-petro-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+            className="inline-flex min-h-[48px] shrink-0 items-center gap-2 rounded-xl bg-petro-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
           >
             <span>Request a Consultation</span>
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

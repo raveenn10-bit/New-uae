@@ -159,7 +159,7 @@ export function ManpowerRequestForm({
     <form
       onSubmit={(e) => e.preventDefault()}
       noValidate
-      className="space-y-6 rounded-sm border border-slate-200 bg-white p-6 shadow-industrial sm:p-8"
+      className="space-y-6 rounded-xl border border-slate-200 bg-white p-6 shadow-industrial sm:p-8"
     >
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-4">
         <div>
@@ -172,7 +172,7 @@ export function ManpowerRequestForm({
               : 'Add one or more workforce categories and quantities to generate a structured B2B quotation enquiry.'}
           </p>
         </div>
-        <span className="rounded-sm bg-petro-light-grey px-3 py-1.5 text-xs font-semibold text-petro-navy">
+        <span className="rounded-xl bg-petro-light-grey px-3 py-1.5 text-xs font-semibold text-petro-navy">
           Total Headcount: <strong className="text-petro-blue">{totalWorkers}</strong>
         </span>
       </div>
@@ -189,7 +189,7 @@ export function ManpowerRequestForm({
             value={form.fullName}
             onChange={(e) => setForm({ ...form, fullName: e.target.value })}
             placeholder="Your full name"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           />
           {errors.fullName && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -209,7 +209,7 @@ export function ManpowerRequestForm({
             value={form.companyName}
             onChange={(e) => setForm({ ...form, companyName: e.target.value })}
             placeholder="Company / EPC contractor name"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           />
           {errors.companyName && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -229,7 +229,7 @@ export function ManpowerRequestForm({
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             placeholder="procurement@company.com"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           />
           {errors.email && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -249,7 +249,7 @@ export function ManpowerRequestForm({
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
             placeholder="+971 XX XXX XXXX"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           />
           {errors.phone && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -261,7 +261,7 @@ export function ManpowerRequestForm({
       </div>
 
       {/* Dynamic Multi-Category Workforce Rows */}
-      <div className="rounded-sm border border-slate-200 bg-petro-light-grey/60 p-4 sm:p-5">
+      <div className="rounded-xl border border-slate-200 bg-petro-light-grey/60 p-4 sm:p-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <label className="text-xs font-bold uppercase tracking-wider text-petro-navy">
             Required Manpower Categories &amp; Quantities *
@@ -269,7 +269,7 @@ export function ManpowerRequestForm({
           <button
             type="button"
             onClick={addLine}
-            className="inline-flex min-h-[36px] items-center gap-1.5 rounded-sm bg-petro-navy px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-petro-blue"
+            className="inline-flex min-h-[36px] items-center gap-1.5 rounded-xl bg-petro-navy px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-petro-blue"
           >
             <Plus className="h-3.5 w-3.5" aria-hidden="true" />
             <span>Add Category</span>
@@ -284,7 +284,7 @@ export function ManpowerRequestForm({
                   aria-label={`Manpower Category ${idx + 1}`}
                   value={line.category}
                   onChange={(e) => updateLine(line.id, 'category', e.target.value)}
-                  className="w-full rounded-sm border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 >
                   {confirmedManpowerCategories.map((c) => (
                     <option key={c.id} value={c.title}>
@@ -301,7 +301,7 @@ export function ManpowerRequestForm({
                   value={line.quantity}
                   onChange={(e) => updateLine(line.id, 'quantity', e.target.value)}
                   placeholder="Qty"
-                  className="w-full rounded-sm border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 />
               </div>
               <div className="col-span-3 sm:col-span-1 flex justify-end">
@@ -310,7 +310,7 @@ export function ManpowerRequestForm({
                   onClick={() => removeLine(line.id)}
                   disabled={lines.length <= 1}
                   aria-label={`Remove row ${idx + 1}`}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-300 bg-white text-slate-500 transition-colors hover:border-red-400 hover:text-red-600 disabled:opacity-40"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 bg-white text-slate-500 transition-colors hover:border-red-400 hover:text-red-600 disabled:opacity-40"
                 >
                   <Trash2 className="h-4 w-4" aria-hidden="true" />
                 </button>
@@ -339,7 +339,7 @@ export function ManpowerRequestForm({
             value={form.projectLocation}
             onChange={(e) => setForm({ ...form, projectLocation: e.target.value })}
             placeholder="Site / Industrial Zone"
-            className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           />
           {errors.projectLocation && (
             <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -357,7 +357,7 @@ export function ManpowerRequestForm({
             id="mq-duration"
             value={form.contractDuration}
             onChange={(e) => setForm({ ...form, contractDuration: e.target.value })}
-            className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           >
             <option value="Short-Term (1–3 Months)">Short-Term (1–3 Months)</option>
             <option value="Medium-Term (3–6 Months)">Medium-Term (3–6 Months)</option>
@@ -375,7 +375,7 @@ export function ManpowerRequestForm({
             type="date"
             value={form.expectedStartDate}
             onChange={(e) => setForm({ ...form, expectedStartDate: e.target.value })}
-            className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
           />
         </div>
       </div>
@@ -390,7 +390,7 @@ export function ManpowerRequestForm({
           value={form.additionalRequirements}
           onChange={(e) => setForm({ ...form, additionalRequirements: e.target.value })}
           placeholder="Specify shift schedules, site access prerequisites, trade certifications, or equipment scope..."
-          className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+          className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
         />
       </div>
 
@@ -400,7 +400,7 @@ export function ManpowerRequestForm({
           <button
             type="button"
             onClick={handleWhatsApp}
-            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5d]"
+            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5d]"
           >
             <MessageSquare className="h-4 w-4" aria-hidden="true" />
             <span>Send via WhatsApp</span>
@@ -411,7 +411,7 @@ export function ManpowerRequestForm({
           <button
             type="button"
             onClick={handleEmail}
-            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-sm bg-petro-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+            className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-petro-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
             <span>Send via Email</span>
@@ -421,7 +421,7 @@ export function ManpowerRequestForm({
         <button
           type="button"
           onClick={handleCopy}
-          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm border border-slate-300 bg-petro-light-grey px-5 py-3 text-sm font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-white"
+          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-slate-300 bg-petro-light-grey px-5 py-3 text-sm font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-white"
         >
           {copied ? (
             <>
@@ -438,7 +438,7 @@ export function ManpowerRequestForm({
       </div>
 
       {!isWhatsAppReady && !isEmailReady && (
-        <p className="rounded-sm border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
+        <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
           Direct WhatsApp and email dispatch will activate automatically once PETROCON&apos;s
           verified WhatsApp number and email are configured in <code>src/config/company.ts</code>.
         </p>

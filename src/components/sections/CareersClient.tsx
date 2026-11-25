@@ -151,7 +151,7 @@ export function CareersClient() {
               {confirmedVacancies.map((vac) => (
                 <article
                   key={vac.id}
-                  className="rounded-sm border border-slate-200 bg-petro-light-grey/40 p-6"
+                  className="rounded-xl border border-slate-200 bg-petro-light-grey/40 p-6"
                 >
                   <span className="text-xs font-semibold uppercase tracking-wider text-petro-blue">
                     {vac.employmentType} &middot; {vac.location}
@@ -195,7 +195,7 @@ export function CareersClient() {
                   type="button"
                   onClick={() => setSelectedDivision(div)}
                   className={cn(
-                    'min-h-[44px] shrink-0 rounded-sm border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors',
+                    'min-h-[44px] shrink-0 rounded-xl border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors',
                     active
                       ? 'border-petro-navy bg-petro-navy text-white'
                       : 'border-slate-300 bg-white text-petro-navy hover:border-petro-blue'
@@ -233,7 +233,7 @@ export function CareersClient() {
           <form
             onSubmit={(e) => e.preventDefault()}
             noValidate
-            className="mt-10 space-y-5 rounded-sm border border-slate-200 bg-white p-6 shadow-industrial sm:p-10"
+            className="mt-10 space-y-5 rounded-xl border border-slate-200 bg-white p-6 shadow-industrial sm:p-10"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
@@ -246,7 +246,7 @@ export function CareersClient() {
                   value={form.fullName}
                   onChange={(e) => setForm({ ...form, fullName: e.target.value })}
                   placeholder="Your full name"
-                  className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 />
                 {errors.fullName && (
                   <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -266,7 +266,7 @@ export function CareersClient() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="candidate@email.com"
-                  className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 />
                 {errors.email && (
                   <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -286,7 +286,7 @@ export function CareersClient() {
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   placeholder="+971 XX XXX XXXX"
-                  className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 />
                 {errors.phone && (
                   <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -306,7 +306,7 @@ export function CareersClient() {
                   value={form.nationality}
                   onChange={(e) => setForm({ ...form, nationality: e.target.value })}
                   placeholder="Your nationality"
-                  className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 />
                 {errors.nationality && (
                   <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -324,7 +324,7 @@ export function CareersClient() {
                   id="career-position"
                   value={form.position}
                   onChange={(e) => setForm({ ...form, position: e.target.value })}
-                  className="mt-1.5 w-full rounded-sm border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 >
                   {careerCategories.map((c) => (
                     <option key={c.id} value={c.title}>
@@ -350,7 +350,7 @@ export function CareersClient() {
                   value={form.experienceYears}
                   onChange={(e) => setForm({ ...form, experienceYears: e.target.value })}
                   placeholder="e.g. 5 years"
-                  className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                  className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
                 />
                 {errors.experienceYears && (
                   <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
@@ -371,7 +371,7 @@ export function CareersClient() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 placeholder="Share your trade certifications, Oil & Gas project background, or current availability..."
-                className="mt-1.5 w-full rounded-sm border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
+                className="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-petro-blue focus:outline-none"
               />
             </div>
 
@@ -380,7 +380,7 @@ export function CareersClient() {
                 <button
                   type="button"
                   onClick={handleWhatsApp}
-                  className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5d]"
+                  className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5d]"
                 >
                   <MessageSquare className="h-4 w-4" aria-hidden="true" />
                   <span>Send via WhatsApp</span>
@@ -391,7 +391,7 @@ export function CareersClient() {
                 <button
                   type="button"
                   onClick={handleEmail}
-                  className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-sm bg-petro-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+                  className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-petro-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
                 >
                   <Mail className="h-4 w-4" aria-hidden="true" />
                   <span>Send via Recruitment Email</span>
@@ -401,7 +401,7 @@ export function CareersClient() {
               <button
                 type="button"
                 onClick={handleCopy}
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm border border-slate-300 bg-petro-light-grey px-5 py-3 text-sm font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-white"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-slate-300 bg-petro-light-grey px-5 py-3 text-sm font-semibold text-petro-navy transition-colors hover:border-petro-blue hover:bg-white"
               >
                 {copied ? (
                   <>
@@ -418,7 +418,7 @@ export function CareersClient() {
             </div>
 
             {!isWhatsAppReady && !isEmailReady && (
-              <p className="rounded-sm border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
+              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
                 Direct WhatsApp and recruitment email dispatch will activate once PETROCON&apos;s
                 verified recruitment contact details are configured in{' '}
                 <code>src/config/company.ts</code>.
@@ -444,7 +444,7 @@ export function CareersClient() {
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.96, opacity: 0 }}
-              className="max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-sm bg-white p-6 shadow-2xl sm:p-8"
+              className="max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-xl bg-white p-6 shadow-2xl sm:p-8"
             >
               <div className="flex items-start justify-between gap-4 border-b border-slate-100 pb-4">
                 <div>
@@ -462,7 +462,7 @@ export function CareersClient() {
                   type="button"
                   onClick={() => setActiveModalCategory(null)}
                   aria-label="Close role details"
-                  className="flex h-10 w-10 items-center justify-center rounded-sm bg-slate-100 text-petro-navy hover:bg-slate-200"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-petro-navy hover:bg-slate-200"
                 >
                   <X className="h-5 w-5" aria-hidden="true" />
                 </button>
@@ -504,14 +504,14 @@ export function CareersClient() {
                 <button
                   type="button"
                   onClick={() => setActiveModalCategory(null)}
-                  className="min-h-[44px] rounded-sm border border-slate-300 px-4 py-2 text-sm font-semibold text-petro-navy hover:bg-slate-50"
+                  className="min-h-[44px] rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-petro-navy hover:bg-slate-50"
                 >
                   Close
                 </button>
                 <button
                   type="button"
                   onClick={() => jumpToFormWithRole(activeModalCategory.title)}
-                  className="min-h-[44px] rounded-sm bg-petro-blue px-5 py-2 text-sm font-semibold text-white hover:bg-petro-blue-dark"
+                  className="min-h-[44px] rounded-xl bg-petro-blue px-5 py-2 text-sm font-semibold text-white hover:bg-petro-blue-dark"
                 >
                   Enquire for This Role
                 </button>

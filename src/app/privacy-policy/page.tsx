@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
           ]}
         />
 
-        <div className="mb-8 rounded-sm border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
+        <div className="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
           <strong>DRAFT DOCUMENT — FOR COMPANY APPROVAL:</strong> This Privacy Policy is a
           preliminary frontend draft prepared for {companyConfig.legalName}. Legal counsel and
           management should review and approve all clauses before publishing in production.

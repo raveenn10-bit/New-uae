@@ -65,7 +65,7 @@ export function MobileNavigation({
               type="button"
               onClick={onClose}
               aria-label="Close navigation menu"
-              className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"
             >
               <X className="h-6 w-6" aria-hidden="true" />
             </button>
@@ -93,7 +93,7 @@ export function MobileNavigation({
                     href={link.href}
                     onClick={onClose}
                     className={cn(
-                      'flex min-h-[56px] items-center justify-between rounded-sm border-b border-white/10 px-3 py-3 font-heading text-2xl font-semibold tracking-industrial transition-colors',
+                      'flex min-h-[56px] items-center justify-between rounded-xl border-b border-white/10 px-3 py-3 font-heading text-2xl font-semibold tracking-industrial transition-colors',
                       isActive
                         ? 'text-[#7CC4F0]'
                         : 'text-white hover:text-[#7CC4F0]'

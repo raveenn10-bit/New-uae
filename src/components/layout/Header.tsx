@@ -23,6 +23,7 @@ export function Header() {
     { label: t.nav.services, href: '/services' },
     { label: t.nav.industries, href: '/industries' },
     { label: t.nav.careers, href: '/careers' },
+    { label: t.nav.contact, href: '/contact' },
   ];
 
   useEffect(() => {
@@ -44,17 +45,25 @@ export function Header() {
     <>
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-          isTransparent
-            ? 'bg-gradient-to-b from-[#071827]/90 via-[#071827]/50 to-transparent py-3.5'
-            : 'border-b border-slate-200/80 bg-white/95 py-2.5 shadow-sm backdrop-blur-md'
+          'fixed inset-x-0 top-0 z-50 px-3 transition-all duration-500 sm:px-5',
+          isTransparent ? 'pt-4' : 'pt-2.5'
         )}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ y: -40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className={cn(
+            'mx-auto flex max-w-7xl items-center justify-between rounded-[1.4rem] border px-3 transition-all duration-500 sm:px-5',
+            isTransparent
+              ? 'border-white/15 bg-[#071827]/35 py-2.5 backdrop-blur-md'
+              : 'border-slate-200/80 bg-white/90 py-2 shadow-industrial backdrop-blur-xl'
+          )}
+        >
           <Link
             href="/"
             aria-label={`${companyConfig.legalName} — Home`}
-            className="flex shrink-0 items-center gap-3 focus-visible:rounded-md"
+            className="flex shrink-0 items-center gap-3 focus-visible:rounded-xl"
           >
             <div className="relative h-12 w-10 sm:h-13 sm:w-11">
               <Image
@@ -101,7 +110,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'relative px-3.5 py-2 text-sm font-medium transition-colors duration-200',
+                    'relative rounded-xl px-4 py-2.5 text-sm font-medium transition-colors duration-200',
                     isTransparent
                       ? isActive
                         ? 'text-white'
@@ -117,8 +126,8 @@ export function Header() {
                       layoutId="nav-active-indicator"
                       transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                       className={cn(
-                        'absolute inset-x-3 bottom-0.5 h-[2px] rounded-full',
-                        isTransparent ? 'bg-[#7CC4F0]' : 'bg-petro-blue'
+                        'absolute inset-0 rounded-xl',
+                        isTransparent ? 'bg-white/15' : 'bg-petro-blue-light'
                       )}
                     />
                   )}
@@ -134,7 +143,7 @@ export function Header() {
               onClick={toggleLocale}
               aria-label="Switch language between English and Arabic"
               className={cn(
-                'inline-flex h-10 items-center gap-1.5 rounded-sm border px-3 text-xs font-semibold transition-colors',
+                'inline-flex h-10 items-center gap-1.5 rounded-xl border px-3 text-xs font-semibold transition-colors',
                 isTransparent
                   ? 'border-white/25 bg-white/10 text-white hover:bg-white/20'
                   : 'border-slate-300 bg-slate-50 text-petro-navy hover:border-petro-blue'
@@ -147,12 +156,13 @@ export function Header() {
             <Link
               href="/contact"
               className={cn(
-                'group inline-flex items-center gap-2 rounded-sm px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-200',
+                'group relative inline-flex items-center gap-2 overflow-hidden rounded-xl px-5 py-3 text-sm font-semibold tracking-wide transition-all duration-200',
                 isTransparent
                   ? 'bg-petro-blue text-white shadow-lg shadow-petro-navy/30 hover:bg-[#176291]'
                   : 'bg-petro-navy text-white hover:bg-petro-blue'
               )}
             >
+              <span className="btn-shine" aria-hidden="true" />
               <span>{t.nav.requestManpower}</span>
               <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
@@ -165,7 +175,7 @@ export function Header() {
               onClick={toggleLocale}
               aria-label="Switch language"
               className={cn(
-                'inline-flex h-10 items-center gap-1 rounded-md px-2.5 text-xs font-semibold transition-colors',
+                'inline-flex h-10 items-center gap-1 rounded-xl px-2.5 text-xs font-semibold transition-colors',
                 isTransparent
                   ? 'bg-white/10 text-white'
                   : 'bg-slate-100 text-petro-navy'
@@ -180,7 +190,7 @@ export function Header() {
               aria-label="Open navigation menu"
               aria-expanded={mobileOpen}
               className={cn(
-                'inline-flex h-11 w-11 items-center justify-center rounded-md transition-colors',
+                'inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors',
                 isTransparent
                   ? 'bg-white/10 text-white hover:bg-white/20'
                   : 'bg-slate-100 text-petro-navy hover:bg-slate-200'
@@ -189,13 +199,13 @@ export function Header() {
               <Menu className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-        </div>
+        </motion.div>
       </header>
 
       <MobileNavigation
         isOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
-        navLinks={[...navLinks, { label: t.nav.contact, href: '/contact' }]}
+        navLinks={navLinks}
         currentPath={pathname}
       />
     </>

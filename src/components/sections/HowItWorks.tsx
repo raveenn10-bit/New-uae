@@ -26,9 +26,9 @@ export function HowItWorks() {
           {howItWorksSteps.map((item) => (
             <div
               key={item.step}
-              className="group relative flex flex-col rounded-sm border border-slate-200 bg-petro-light-grey/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue hover:bg-white hover:shadow-industrial"
+              className="group relative flex flex-col rounded-xl border border-slate-200 bg-petro-light-grey/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-petro-blue hover:bg-white hover:shadow-industrial"
             >
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-sm bg-petro-navy font-heading text-base font-bold text-white transition-colors duration-300 group-hover:bg-petro-blue">
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-xl bg-petro-navy font-heading text-base font-bold text-white transition-colors duration-300 group-hover:bg-petro-blue">
                 {item.step}
               </div>
               <h3 className="mt-6 font-heading text-lg font-bold tracking-industrial text-petro-navy">

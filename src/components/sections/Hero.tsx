@@ -85,7 +85,7 @@ export function Hero() {
       {/* Hero Foreground Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <div className="hero-reveal mb-5 inline-flex items-center gap-3 rounded-sm border border-[#7CC4F0]/30 bg-[#071827]/65 px-3.5 py-1.5 backdrop-blur-sm">
+          <div className="hero-reveal mb-5 inline-flex items-center gap-3 rounded-xl border border-[#7CC4F0]/30 bg-[#071827]/65 px-3.5 py-1.5 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-petro-blue" />
             <span className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
               {t.hero.badge}
@@ -104,7 +104,7 @@ export function Hero() {
           <div className="hero-reveal mt-9 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href="#request-manpower"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-sm bg-petro-blue px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-xl shadow-petro-navy/40 transition-all duration-200 hover:bg-petro-blue-dark"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-xl bg-petro-blue px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-xl shadow-petro-navy/40 transition-all duration-200 hover:bg-petro-blue-dark"
             >
               <span>{t.hero.ctaRequest}</span>
               <ArrowRight
@@ -115,7 +115,7 @@ export function Hero() {
 
             <Link
               href="/contact"
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-sm border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white hover:text-petro-navy"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white hover:text-petro-navy"
             >
               <FileText className="h-4 w-4" aria-hidden="true" />
               <span>{t.hero.ctaQuote}</span>

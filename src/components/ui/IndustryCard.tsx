@@ -20,7 +20,7 @@ export function IndustryCard({
   return (
     <article
       className={cn(
-        'group flex flex-col overflow-hidden rounded-sm border border-white/10 bg-petro-navy-mid/90 text-white transition-all duration-300 hover:border-petro-blue/60',
+        'group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-petro-navy-mid/90 text-white transition-all duration-300 hover:border-petro-blue/60',
         className
       )}
     >

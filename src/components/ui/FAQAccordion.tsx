@@ -33,7 +33,7 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
               </span>
               <span
                 className={cn(
-                  'flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border transition-colors',
+                  'flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border transition-colors',
                   isOpen
                     ? 'border-petro-blue bg-petro-blue text-white'
                     : 'border-slate-300 text-petro-navy'

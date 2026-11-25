@@ -20,7 +20,7 @@ export function WhatsAppButton() {
       <div className="group relative flex items-center">
         <span
           role="tooltip"
-          className="pointer-events-none mr-3 hidden rounded-md bg-petro-navy px-3 py-1.5 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:block"
+          className="pointer-events-none mr-3 hidden rounded-xl bg-petro-navy px-3 py-1.5 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:block"
         >
           Chat on WhatsApp
         </span>

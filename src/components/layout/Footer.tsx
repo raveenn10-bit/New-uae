@@ -45,7 +45,7 @@ export function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-sm border border-white/15 px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-petro-blue hover:text-white"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-petro-blue hover:text-white"
                   >
                     <span>{social.platform}</span>
                     <ExternalLink className="h-3 w-3" aria-hidden="true" />
@@ -149,7 +149,7 @@ export function Footer() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-sm border border-petro-blue/50 bg-petro-blue/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#7CC4F0] transition-colors hover:bg-petro-blue hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-xl border border-petro-blue/50 bg-petro-blue/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#7CC4F0] transition-colors hover:bg-petro-blue hover:text-white"
                 >
                   Open Enquiry Form
                 </Link>

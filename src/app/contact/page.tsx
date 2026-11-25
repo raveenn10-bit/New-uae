@@ -48,7 +48,7 @@ export default function ContactPage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="space-y-6 lg:col-span-4">
-              <div className="rounded-sm border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
                 <h2 className="font-heading text-xl font-bold tracking-industrial text-petro-navy">
                   Corporate Contact Details
                 </h2>
@@ -123,7 +123,7 @@ export default function ContactPage({
               </div>
 
               {contact.googleMaps.verified && contact.googleMaps.embedUrl && (
-                <div className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm">
+                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                   <iframe
                     src={contact.googleMaps.embedUrl}
                     title={`${companyConfig.legalName} Office Location`}

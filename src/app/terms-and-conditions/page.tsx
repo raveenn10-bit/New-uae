@@ -22,7 +22,7 @@ export default function TermsPage() {
           ]}
         />
 
-        <div className="mb-8 rounded-sm border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
+        <div className="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
           <strong>DRAFT DOCUMENT — FOR COMPANY APPROVAL:</strong> These Terms &amp; Conditions are
           a preliminary frontend draft prepared for {companyConfig.legalName}. Legal counsel and
           management should review and approve all terms before production launch.

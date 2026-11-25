@@ -80,3 +80,72 @@
     animation: none !important;
   }
 }
+
+/* ---------- Redesign utilities ---------- */
+
+/* Engineering blueprint grid for dark hero/scene backgrounds */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(124, 196, 240, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 196, 240, 0.6) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 30% 40%, black 20%, transparent 75%);
+}
+
+/* Light sweep across primary buttons */
+.btn-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: btn-shine 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes btn-shine {
+  0%, 55% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Cursor spotlight on bento cards (uses --mx/--my set from JS) */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(32, 127, 186, 0.16), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: -1;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Reverse marquee direction */
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+/* Slow rotating ring used in CTA */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+}
+
+@keyframes tech-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: none; }
+}

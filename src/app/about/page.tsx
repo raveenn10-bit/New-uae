@@ -49,7 +49,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="lg:col-span-6">
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm bg-petro-navy shadow-industrial md:aspect-[4/3]">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-petro-navy shadow-industrial md:aspect-[4/3]">
                 <Image
                   src="/images/mobile/industrial-engineers-mobile.webp"
                   alt="PETROCON branded engineers conducting site review"
@@ -74,8 +74,8 @@ export default function AboutPage() {
       <section className="border-y border-slate-200 bg-petro-light-grey py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-sm border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-petro-blue text-white">
+            <div className="rounded-xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petro-blue text-white">
                 <Target className="h-6 w-6" aria-hidden="true" />
               </div>
               <h2 className="mt-6 font-heading text-2xl font-bold tracking-industrial text-petro-navy">
@@ -86,8 +86,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-sm border border-slate-200 bg-petro-navy p-8 text-white shadow-sm sm:p-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-petro-blue text-white">
+            <div className="rounded-xl border border-slate-200 bg-petro-navy p-8 text-white shadow-sm sm:p-10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petro-blue text-white">
                 <Eye className="h-6 w-6" aria-hidden="true" />
               </div>
               <h2 className="mt-6 font-heading text-2xl font-bold tracking-industrial text-white">
@@ -114,7 +114,7 @@ export default function AboutPage() {
             {about.coreValues.map((value, idx) => (
               <div
                 key={value.title}
-                className="rounded-sm border border-slate-200 bg-petro-light-grey/50 p-6 transition-colors hover:border-petro-blue/40 hover:bg-white"
+                className="rounded-xl border border-slate-200 bg-petro-light-grey/50 p-6 transition-colors hover:border-petro-blue/40 hover:bg-white"
               >
                 <span className="font-heading text-xs font-bold tracking-widest text-petro-blue">
                   0{idx + 1}
@@ -136,7 +136,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-petro-blue text-white">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-petro-blue text-white">
                 <Compass className="h-5 w-5" aria-hidden="true" />
               </div>
               <h2 className="mt-5 font-heading text-3xl font-bold tracking-industrial">
@@ -158,7 +158,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-petro-blue text-white">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-petro-blue text-white">
                 <ShieldCheck className="h-5 w-5" aria-hidden="true" />
               </div>
               <h2 className="mt-5 font-heading text-3xl font-bold tracking-industrial">
@@ -193,7 +193,7 @@ export default function AboutPage() {
             {about.corporateApproach.map((item) => (
               <div
                 key={item.step}
-                className="relative rounded-sm border border-slate-200 bg-white p-6 shadow-sm"
+                className="relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <span className="font-heading text-3xl font-bold text-petro-blue/25">
                   {item.step}
@@ -208,7 +208,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="mt-14 flex flex-col items-start justify-between gap-6 rounded-sm bg-petro-light-grey p-8 sm:flex-row sm:items-center">
+          <div className="mt-14 flex flex-col items-start justify-between gap-6 rounded-xl bg-petro-light-grey p-8 sm:flex-row sm:items-center">
             <div>
               <h3 className="font-heading text-xl font-bold text-petro-navy">
                 Ready to discuss your technical or workforce scope?
@@ -219,7 +219,7 @@ export default function AboutPage() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex min-h-[48px] shrink-0 items-center gap-2 rounded-sm bg-petro-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
+              className="inline-flex min-h-[48px] shrink-0 items-center gap-2 rounded-xl bg-petro-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-petro-blue-dark"
             >
               <span>Contact Our Team</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
