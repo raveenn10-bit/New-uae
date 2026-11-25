@@ -17,7 +17,7 @@ import { faqData } from '@/config/faq';
 import { MultiLayerScene } from '@/components/ui/MultiLayerScene';
 import { HeroSlider } from '@/components/sections/HeroSlider';
 import { StatsBand } from '@/components/sections/StatsBand';
-import { StoryJourney } from '@/components/sections/StoryJourney';
+import { MobilisationJourney } from '@/components/sections/mobilisation/MobilisationJourney';
 import { WhyPetroconBento } from '@/components/sections/WhyPetroconBento';
 import { DisciplineMarquee } from '@/components/sections/DisciplineMarquee';
 import { CTABand } from '@/components/sections/CTABand';
@@ -512,7 +512,7 @@ export function CinematicStoryHome() {
         </div>
       </section>
 
-      <StoryJourney />
+      <MobilisationJourney />
 
       <WhyPetroconBento />
 
