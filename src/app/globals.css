@@ -149,3 +149,25 @@
   from { opacity: 0; transform: translateY(24px) scale(0.98); filter: blur(6px); }
   to { opacity: 1; transform: none; filter: none; }
 }
+
+/* Energy flowing through petroleum-blue pipeline indicators */
+.pipe-flow {
+  background-image: repeating-linear-gradient(90deg, transparent 0 22px, rgba(124, 196, 240, 0.95) 22px 30px);
+  background-size: 60px 100%;
+  animation: pipe-flow-x 1.1s linear infinite;
+}
+.pipe-flow-y {
+  background-image: repeating-linear-gradient(180deg, transparent 0 26px, rgba(124, 196, 240, 0.95) 26px 34px);
+  background-size: 100% 68px;
+  animation: pipe-flow-y 1.2s linear infinite;
+}
+@keyframes pipe-flow-x { to { background-position: 60px 0; } }
+@keyframes pipe-flow-y { to { background-position: 0 68px; } }
+[dir='rtl'] .pipe-flow { animation-direction: reverse; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pipe-flow,
+  .pipe-flow-y {
+    animation: none !important;
+  }
+}
