@@ -9,7 +9,7 @@ export function HowItWorks() {
 
   return (
     <section className="gsap-reveal-section border-y border-slate-200 bg-white py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
         <SectionHeading
           eyebrow={t.sections.howItWorksEyebrow}
           title={t.sections.howItWorksTitle}

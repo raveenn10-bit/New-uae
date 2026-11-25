@@ -41,7 +41,7 @@ export function IndustryCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-petro-navy via-petro-navy/35 to-transparent" />
         <div className="absolute bottom-4 left-5 right-5">
-          <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+          <p className="text-[11px] font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
             {industry.tagline}
           </p>
           <h3 className="mt-1 font-heading text-xl font-bold tracking-industrial text-white">
@@ -58,7 +58,7 @@ export function IndustryCard({
             type="button"
             onClick={() => setExpanded((prev) => !prev)}
             aria-expanded={expanded}
-            className="inline-flex min-h-[40px] items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#7CC4F0] transition-colors hover:text-white"
+            className="inline-flex min-h-[40px] items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#B8D0DE] transition-colors hover:text-white"
           >
             <span>{expanded ? 'Hide Scope' : 'View Sector Scope'}</span>
             <ChevronDown
@@ -89,7 +89,7 @@ export function IndustryCard({
                 </ul>
                 <Link
                   href={`/industries#${industry.slug}`}
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-[#7CC4F0]"
+                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-[#B8D0DE]"
                 >
                   <span>Explore Sector</span>
                   <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />

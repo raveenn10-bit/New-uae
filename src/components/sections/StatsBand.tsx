@@ -17,8 +17,8 @@ export function StatsBand() {
   ];
 
   return (
-    <section aria-label="PETROCON at a glance" className="relative z-20 px-4 pt-6 sm:px-6 lg:px-8">
-      <Stagger className="mx-auto grid max-w-6xl grid-cols-2 gap-3 rounded-[2rem] border border-white/10 bg-white p-3 shadow-industrial-lg sm:gap-4 sm:p-4 lg:grid-cols-4">
+    <section aria-label="PETROCON at a glance" className="relative z-20 px-4 pt-6 sm:px-6 lg:px-12 2xl:px-16">
+      <Stagger className="mx-auto grid max-w-7xl grid-cols-2 gap-3 rounded-[2rem] border border-white/10 bg-white p-3 shadow-industrial-lg sm:gap-4 sm:p-4 lg:grid-cols-4">
         {stats.map(({ icon: Icon, value, label }) => (
           <StaggerItem
             key={label}
@@ -32,7 +32,7 @@ export function StatsBand() {
                 to={value}
                 className="block font-heading text-3xl font-bold leading-none text-petro-navy transition-colors group-hover:text-white sm:text-4xl"
               />
-              <span className="mt-1 block text-xs font-semibold uppercase tracking-wider text-petro-steel transition-colors group-hover:text-[#7CC4F0]">
+              <span className="mt-1 block text-xs font-semibold uppercase tracking-wider text-petro-steel transition-colors group-hover:text-petro-silver">
                 {label}
               </span>
             </span>

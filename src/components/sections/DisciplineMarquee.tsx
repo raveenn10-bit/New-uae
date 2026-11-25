@@ -37,7 +37,7 @@ function Row({ items, reverse = false }: { items: typeof rowA; reverse?: boolean
         {[...items, ...items, ...items].map(({ icon: Icon, label }, i) => (
           <span
             key={`${label}-${i}`}
-            className="flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-white/5 py-2.5 pl-2.5 pr-6 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-[#7CC4F0]/50 hover:bg-petro-blue/20"
+            className="flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-white/5 py-2.5 pl-2.5 pr-6 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-[#B8D0DE]/50 hover:bg-petro-blue/20"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-petro-blue/90">
               <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
@@ -53,7 +53,7 @@ function Row({ items, reverse = false }: { items: typeof rowA; reverse?: boolean
 /** Two counter-scrolling rows of trade disciplines with icons. */
 export function DisciplineMarquee() {
   return (
-    <section aria-label="Trade disciplines" className="space-y-3 bg-[#071827] py-12">
+    <section aria-label="Trade disciplines" className="space-y-3 bg-[#101820] py-12">
       <Row items={rowA} />
       <Row items={rowB} reverse />
     </section>

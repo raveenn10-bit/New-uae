@@ -7,7 +7,7 @@ import { Reveal } from '@/components/ui/motion/Reveal';
 /** Rounded closing call-to-action card with animated rings and kinetic headline. */
 export function CTABand() {
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section className="bg-white px-4 py-20 sm:px-6 lg:px-12 2xl:px-16">
       <Reveal direction="scale" className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-petro-navy px-6 py-16 text-white sm:px-12 lg:px-16 lg:py-20">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -17,19 +17,19 @@ export function CTABand() {
             className="absolute inset-0 h-full w-full object-cover opacity-20"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-petro-navy via-petro-navy/85 to-petro-blue/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-petro-navy via-petro-navy/85 to-petro-steel-blue/40" />
           <div
             aria-hidden="true"
             className="animate-spin-slow absolute -right-32 -top-32 h-[440px] w-[440px] rounded-full border-[18px] border-dashed border-white/10"
           />
           <div
             aria-hidden="true"
-            className="absolute -bottom-24 right-40 h-64 w-64 rounded-full bg-petro-blue/40 blur-[90px]"
+            className="absolute -bottom-24 right-40 h-64 w-64 rounded-full bg-petro-steel-blue/40 blur-[90px]"
           />
 
           <div className="relative grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+              <p className="text-xs font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
                 Ready when your project is
               </p>
               <KineticText
@@ -47,7 +47,7 @@ export function CTABand() {
               <Magnetic>
                 <a
                   href="#request-manpower"
-                  className="group relative inline-flex min-h-[58px] w-full items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-blue px-8 font-semibold shadow-xl shadow-petro-blue/30 hover:bg-petro-blue-dark sm:w-auto"
+                  className="group relative inline-flex min-h-[58px] w-full items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-steel-blue px-8 font-semibold text-petro-navy shadow-xl shadow-black/30 hover:bg-petro-silver sm:w-auto"
                 >
                   <span className="btn-shine" aria-hidden="true" />
                   Request Manpower

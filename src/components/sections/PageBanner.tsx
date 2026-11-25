@@ -41,13 +41,13 @@ export function PageBanner({
           sizes="100vw"
           className={`object-cover opacity-35 ${mobileImage ? 'hidden md:block' : ''}`}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071827] via-[#071827]/85 to-[#071827]/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-transparent to-[#071827]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/85 to-[#101820]/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/60" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
         <Breadcrumbs items={breadcrumbs} theme="dark" />
-        <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+        <p className="text-xs font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
           {eyebrow}
         </p>
         <h1 className="mt-3 max-w-3xl font-heading text-3xl font-bold leading-tight tracking-industrial text-white sm:text-5xl">

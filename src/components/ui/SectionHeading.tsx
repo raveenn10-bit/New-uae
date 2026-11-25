@@ -32,7 +32,7 @@ export function SectionHeading({
           className={cn(
             'mb-4 inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5',
             isDark
-              ? 'border-[#7CC4F0]/30 bg-white/5 text-[#7CC4F0]'
+              ? 'border-[#B8D0DE]/30 bg-white/5 text-[#B8D0DE]'
               : 'border-petro-blue/20 bg-petro-blue-light text-petro-blue'
           )}
         >
@@ -40,13 +40,13 @@ export function SectionHeading({
             <span
               className={cn(
                 'absolute inline-flex h-full w-full animate-ping rounded-full opacity-60',
-                isDark ? 'bg-[#7CC4F0]' : 'bg-petro-blue'
+                isDark ? 'bg-[#B8D0DE]' : 'bg-petro-blue'
               )}
             />
             <span
               className={cn(
                 'relative inline-flex h-2 w-2 rounded-full',
-                isDark ? 'bg-[#7CC4F0]' : 'bg-petro-blue'
+                isDark ? 'bg-[#B8D0DE]' : 'bg-petro-blue'
               )}
             />
           </span>

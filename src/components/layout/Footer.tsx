@@ -17,7 +17,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-petro-navy text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-12 2xl:px-16 lg:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Brand & Intro */}
           <div className="lg:col-span-4">
@@ -72,7 +72,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 transition-colors hover:text-[#7CC4F0]"
+                    className="text-slate-400 transition-colors hover:text-[#B8D0DE]"
                   >
                     {item.label}
                   </Link>
@@ -91,7 +91,7 @@ export function Footer() {
                 <li key={service.id}>
                   <Link
                     href={`/services#${service.slug}`}
-                    className="text-slate-400 transition-colors hover:text-[#7CC4F0]"
+                    className="text-slate-400 transition-colors hover:text-[#B8D0DE]"
                   >
                     {service.title}
                   </Link>
@@ -149,7 +149,7 @@ export function Footer() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-petro-blue/50 bg-petro-blue/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#7CC4F0] transition-colors hover:bg-petro-blue hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-xl border border-petro-blue/50 bg-petro-blue/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#B8D0DE] transition-colors hover:bg-petro-blue hover:text-white"
                 >
                   Open Enquiry Form
                 </Link>
@@ -177,7 +177,7 @@ export function Footer() {
               href={developerCredit.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 transition-colors hover:text-[#7CC4F0]"
+              className="text-slate-400 transition-colors hover:text-[#B8D0DE]"
             >
               {developerCredit.label}
             </a>

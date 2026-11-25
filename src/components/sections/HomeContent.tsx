@@ -97,7 +97,7 @@ export function HomeContent() {
         id="manpower-categories"
         className="gsap-reveal-section bg-white py-20 lg:py-28"
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               eyebrow={t.sections.manpowerEyebrow}
@@ -223,7 +223,7 @@ export function HomeContent() {
 
       {/* 4. COMPANY INTRODUCTION — Split-Screen Editorial Layout */}
       <section id="company-intro" className="gsap-reveal-section bg-petro-light-grey py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <SectionHeading
@@ -272,7 +272,7 @@ export function HomeContent() {
 
       {/* 5. OUR SERVICES */}
       <section className="gsap-reveal-section bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               eyebrow="Technical Services"
@@ -310,7 +310,7 @@ export function HomeContent() {
 
       {/* 6. INDUSTRIES WE SERVE */}
       <section className="gsap-reveal-section bg-petro-navy py-20 text-white lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               theme="dark"
@@ -319,7 +319,7 @@ export function HomeContent() {
             />
             <Link
               href="/industries"
-              className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#7CC4F0] hover:text-white"
+              className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#B8D0DE] hover:text-white"
             >
               <span>Explore Industries</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -349,7 +349,7 @@ export function HomeContent() {
       {/* 7. WHY CHOOSE PETROCON (Vanta.NET) */}
       <section className="gsap-reveal-section relative overflow-hidden border-t border-white/10 bg-petro-navy py-20 text-white lg:py-28">
         <VantaNetBackground />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             theme="dark"
             eyebrow="Why Choose PETROCON"
@@ -361,9 +361,9 @@ export function HomeContent() {
               return (
                 <div
                   key={item.id}
-                  className="group rounded-xl border border-white/10 bg-[#071827]/80 p-6 backdrop-blur-sm transition-all hover:border-petro-blue hover:bg-[#0D263D]/90"
+                  className="group rounded-xl border border-white/10 bg-[#101820]/80 p-6 backdrop-blur-sm transition-all hover:border-petro-blue hover:bg-[#354B60]/90"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petro-blue/15 text-[#7CC4F0] group-hover:bg-petro-blue group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petro-blue/15 text-[#B8D0DE] group-hover:bg-petro-blue group-hover:text-white">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h3 className="mt-5 font-heading text-lg font-bold text-white">{item.title}</h3>
@@ -377,7 +377,7 @@ export function HomeContent() {
 
       {/* 8. HSE */}
       <section className="gsap-reveal-section bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="order-2 lg:order-1 lg:col-span-6">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-petro-navy shadow-industrial-lg md:aspect-[4/3]">
@@ -429,7 +429,7 @@ export function HomeContent() {
         id="request-manpower"
         className="gsap-reveal-section scroll-mt-24 border-t border-slate-200 bg-petro-light-grey py-20 lg:py-28"
       >
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow={t.sections.quoteEyebrow}
             title={t.sections.quoteTitle}
@@ -447,7 +447,7 @@ export function HomeContent() {
 
       {/* 11. FAQ */}
       <section className="gsap-reveal-section bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow="Frequently Asked Questions"
             title="Key Information for Clients &amp; Candidates"
@@ -461,10 +461,10 @@ export function HomeContent() {
 
       {/* 12. FINAL CTA */}
       <section className="bg-petro-navy py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="flex flex-col items-start justify-between gap-8 rounded-xl border border-white/10 bg-gradient-to-br from-petro-navy-mid to-petro-navy p-8 sm:p-12 lg:flex-row lg:items-center">
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-widecaps text-[#7CC4F0]">
+              <p className="text-xs font-semibold uppercase tracking-widecaps text-[#B8D0DE]">
                 Partner With PETROCON
               </p>
               <h2 className="mt-3 font-heading text-3xl font-bold tracking-industrial text-white sm:text-4xl">

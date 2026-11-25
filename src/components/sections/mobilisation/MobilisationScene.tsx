@@ -10,8 +10,9 @@ export interface SceneInputs {
   pointer: MutableRefObject<{ x: number; y: number }>;
 }
 
-const BLUE = new THREE.Color('#207FBA');
-const GLOW = new THREE.Color('#7CC4F0');
+const BLUE = new THREE.Color('#354B60');
+const GLOW = new THREE.Color('#7394AC');
+const SPARK = new THREE.Color('#F0F5F7');
 
 /** World positions of the four stations along the journey. */
 const STATIONS = [
@@ -137,11 +138,11 @@ function Pipeline({ progress, curve }: { progress: MutableRefObject<number>; cur
       </mesh>
       <instancedMesh ref={flanges} args={[undefined, undefined, flangeTs.length]}>
         <cylinderGeometry args={[0.09, 0.09, 0.045, 20]} />
-        <meshStandardMaterial color="#C9D6E2" metalness={0.6} roughness={0.3} />
+        <meshStandardMaterial color="#B8D0DE" metalness={0.6} roughness={0.3} />
       </instancedMesh>
       <instancedMesh ref={particles} args={[undefined, undefined, PARTICLES]}>
         <sphereGeometry args={[0.05, 12, 12]} />
-        <meshBasicMaterial color={GLOW} toneMapped={false} />
+        <meshBasicMaterial color={SPARK} toneMapped={false} />
       </instancedMesh>
     </group>
   );
@@ -296,7 +297,7 @@ export default function MobilisationScene({
     >
       <ambientLight intensity={1.1} />
       <directionalLight position={[-4, 8, 6]} intensity={1.6} />
-      <directionalLight position={[5, 2, -4]} intensity={0.6} color="#BFE3FA" />
+      <directionalLight position={[5, 2, -4]} intensity={0.6} color="#B8D0DE" />
       <Rig inputs={inputs} />
       <Suspense fallback={null}>
         <World inputs={inputs} />

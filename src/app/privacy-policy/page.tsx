@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <section className="bg-white pb-20 pt-32 sm:pt-36">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12 2xl:px-16">
         <Breadcrumbs
           theme="light"
           items={[

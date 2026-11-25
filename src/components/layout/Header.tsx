@@ -45,7 +45,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-50 px-3 transition-all duration-500 sm:px-5',
+          'fixed inset-x-0 top-0 z-50 px-3 transition-all duration-500 sm:px-5 lg:px-8 2xl:px-12',
           isTransparent ? 'pt-4' : 'pt-2.5'
         )}
       >
@@ -56,7 +56,7 @@ export function Header() {
           className={cn(
             'mx-auto flex max-w-7xl items-center justify-between rounded-[1.4rem] border px-3 transition-all duration-500 sm:px-5',
             isTransparent
-              ? 'border-white/15 bg-[#071827]/35 py-2.5 backdrop-blur-md'
+              ? 'border-white/15 bg-[#101820]/35 py-2.5 backdrop-blur-md'
               : 'border-slate-200/80 bg-white/90 py-2 shadow-industrial backdrop-blur-xl'
           )}
         >
@@ -91,7 +91,7 @@ export function Header() {
               <span
                 className={cn(
                   'block text-[10px] font-semibold tracking-[0.2em]',
-                  isTransparent ? 'text-[#7CC4F0]' : 'text-petro-blue'
+                  isTransparent ? 'text-[#B8D0DE]' : 'text-petro-blue'
                 )}
               >
                 TECHNICAL WORKS LLC
@@ -158,7 +158,7 @@ export function Header() {
               className={cn(
                 'group relative inline-flex items-center gap-2 overflow-hidden rounded-xl px-5 py-3 text-sm font-semibold tracking-wide transition-all duration-200',
                 isTransparent
-                  ? 'bg-petro-blue text-white shadow-lg shadow-petro-navy/30 hover:bg-[#176291]'
+                  ? 'bg-petro-blue text-white shadow-lg shadow-petro-navy/30 hover:bg-[#101820]'
                   : 'bg-petro-navy text-white hover:bg-petro-blue'
               )}
             >

@@ -124,21 +124,21 @@ export function HeroSlider() {
       </motion.div>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#071827]/95 via-[#071827]/70 to-[#071827]/20" />
-      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#071827] to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#101820]/95 via-[#101820]/70 to-[#101820]/20" />
+      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#101820] to-transparent" />
       <div
         aria-hidden="true"
         className="hero-grid pointer-events-none absolute inset-0 opacity-[0.07]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-petro-blue/25 blur-[140px]"
+        className="pointer-events-none absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-petro-steel-blue/30 blur-[140px]"
       />
 
       {/* Content */}
       <motion.div
         style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
-        className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-36 pt-32 sm:px-6 lg:px-8"
+        className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-36 pt-32 sm:px-6 lg:px-12 2xl:px-16"
       >
         <motion.ul
           className="mb-7 flex flex-wrap gap-2 sm:gap-2.5"
@@ -155,7 +155,7 @@ export function HeroSlider() {
               }}
               className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-3 py-2 text-xs font-semibold backdrop-blur-md sm:px-4 sm:py-2.5 sm:text-sm"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-petro-blue">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-petro-steel-blue text-petro-navy">
                 <Icon className="h-3.5 w-3.5" aria-hidden="true" />
               </span>
               {label}
@@ -168,9 +168,9 @@ export function HeroSlider() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="h-[2px] w-12 origin-left rounded-full bg-petro-blue"
+            className="h-[2px] w-12 origin-left rounded-full bg-petro-steel-blue"
           />
-          <ScrambleEyebrow key={`eb-${slide.id}`} text={slide.eyebrow} className="text-[#7CC4F0]" />
+          <ScrambleEyebrow key={`eb-${slide.id}`} text={slide.eyebrow} className="text-[#B8D0DE]" />
         </div>
 
         <div className="max-w-4xl" aria-live="polite">
@@ -189,7 +189,7 @@ export function HeroSlider() {
             delay={0.35}
             triggerOnScroll={false}
             text={slide.line2}
-            className="mt-1 font-heading text-[2.6rem] font-bold leading-[1.05] tracking-industrial text-[#3BA3E6] sm:text-6xl lg:text-[5.25rem]"
+            className="mt-1 font-heading text-[2.6rem] font-bold leading-[1.05] tracking-industrial text-[#B8D0DE] sm:text-6xl lg:text-[5.25rem]"
           />
         </div>
 
@@ -215,7 +215,7 @@ export function HeroSlider() {
           <Magnetic>
             <a
               href="#request-manpower"
-              className="group relative inline-flex min-h-[56px] w-full items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-blue px-8 text-base font-semibold shadow-xl shadow-petro-blue/30 transition-colors hover:bg-petro-blue-dark sm:w-auto"
+              className="group relative inline-flex min-h-[56px] w-full items-center justify-center gap-2 overflow-hidden rounded-2xl bg-petro-steel-blue px-8 text-base font-semibold text-petro-navy shadow-xl shadow-black/30 transition-colors hover:bg-petro-silver sm:w-auto"
             >
               <span className="btn-shine" aria-hidden="true" />
               <span>{t.hero.ctaRequest}</span>
@@ -235,7 +235,7 @@ export function HeroSlider() {
       </motion.div>
 
       {/* Slide controls with progress */}
-      <div className="absolute bottom-24 left-0 right-0 z-20 mx-auto flex max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+      <div className="absolute bottom-24 left-0 right-0 z-20 mx-auto flex max-w-7xl items-center gap-3 px-5 sm:px-8 lg:px-12 2xl:px-16">
         {slides.map((s, i) => (
           <button
             key={s.id}
@@ -251,7 +251,7 @@ export function HeroSlider() {
             {i === index && (
               <motion.span
                 key={`${s.id}-${paused}`}
-                className="absolute inset-y-0 left-0 rounded-full bg-petro-blue"
+                className="absolute inset-y-0 left-0 rounded-full bg-petro-silver"
                 initial={{ width: '0%' }}
                 animate={{ width: paused || reduce ? '100%' : '100%' }}
                 transition={{ duration: paused || reduce ? 0 : SLIDE_MS / 1000, ease: 'linear' }}
@@ -274,7 +274,7 @@ export function HeroSlider() {
 
       {/* Bottom ticker pill */}
       <div className="absolute inset-x-0 bottom-6 z-20 flex justify-center px-4">
-        <div className="relative w-full max-w-3xl overflow-hidden rounded-full border border-white/15 bg-[#071827]/70 py-2.5 backdrop-blur-md [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
+        <div className="relative w-full max-w-3xl overflow-hidden rounded-full border border-white/15 bg-[#101820]/70 py-2.5 backdrop-blur-md [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
           <div className="animate-mobile-autoscroll gap-8">
             {[...tickerItems, ...tickerItems].map((item, i) => (
               <span
@@ -282,7 +282,7 @@ export function HeroSlider() {
                 className="flex shrink-0 items-center gap-8 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-200"
               >
                 {item}
-                <span className="h-1.5 w-1.5 rounded-full bg-petro-blue" />
+                <span className="h-1.5 w-1.5 rounded-full bg-petro-steel-blue" />
               </span>
             ))}
           </div>

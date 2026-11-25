@@ -35,7 +35,7 @@ export default function AboutPage() {
 
       {/* Company Introduction */}
       <section className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-6">
               <SectionHeading
@@ -72,7 +72,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section className="border-y border-slate-200 bg-petro-light-grey py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petro-blue text-white">
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
       {/* Core Values */}
       <section className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow="Core Values"
             title="Principles That Guide Every Deployment"
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
       {/* Technical Expertise & Safety/Quality Commitment */}
       <section className="bg-petro-navy py-20 text-white lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
               <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-petro-blue text-white">
@@ -150,7 +150,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/services"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#7CC4F0] hover:text-white"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#B8D0DE] hover:text-white"
               >
                 <span>Explore Technical Services</span>
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -170,7 +170,7 @@ export default function AboutPage() {
               <ul className="mt-6 space-y-2.5 text-sm text-slate-200">
                 {hse.pillars.slice(0, 3).map((pillar) => (
                   <li key={pillar.title} className="flex items-center gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-[#7CC4F0]" aria-hidden="true" />
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-[#B8D0DE]" aria-hidden="true" />
                     <span>{pillar.title}</span>
                   </li>
                 ))}
@@ -182,7 +182,7 @@ export default function AboutPage() {
 
       {/* Corporate Approach */}
       <section className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 2xl:px-16">
           <SectionHeading
             eyebrow="How We Work"
             title="Our Corporate Approach"
