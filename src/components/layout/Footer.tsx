@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 import { companyConfig } from '@/config/company';
 import { confirmedServices } from '@/config/services';
 import { Reveal } from '@/components/ui/motion/Reveal';
+import { FooterWordmark } from '@/components/layout/FooterWordmark';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -187,6 +188,7 @@ export function Footer() {
           </p>
         </div>
       </div>
+      <FooterWordmark />
     </footer>
   );
 }
