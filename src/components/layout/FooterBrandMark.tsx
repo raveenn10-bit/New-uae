@@ -28,8 +28,8 @@ export function FooterBrandMark() {
           alt=""
           loading="lazy"
           decoding="async"
-          width={497}
-          height={726}
+          width={754}
+          height={1100}
           className="footer-mark h-full w-auto max-w-none opacity-[0.28] mix-blend-screen sm:opacity-[0.42] lg:opacity-[0.55]"
         />
       </motion.div>
