@@ -228,3 +228,16 @@ html.lenis body {
 @media (prefers-reduced-motion: reduce) {
   .footer-thread::after { animation: none; display: none; }
 }
+
+/* Footer brand mark: soft fade at its own edges + slow breathing float */
+.footer-mark {
+  mask-image: radial-gradient(ellipse 70% 75% at 60% 50%, black 55%, transparent 100%);
+  animation: footer-mark-float 9s ease-in-out infinite;
+}
+@keyframes footer-mark-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-mark { animation: none; }
+}

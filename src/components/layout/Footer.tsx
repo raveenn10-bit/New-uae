@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 import { companyConfig } from '@/config/company';
 import { confirmedServices } from '@/config/services';
 import { Reveal } from '@/components/ui/motion/Reveal';
-import { FooterWordmark } from '@/components/layout/FooterWordmark';
+import { FooterBrandMark, FooterThread } from '@/components/layout/FooterBrandMark';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,8 +18,9 @@ export function Footer() {
     contact.businessHours.verified;
 
   return (
-    <footer className="border-t border-white/10 bg-petro-navy text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-12 2xl:px-16 lg:py-16">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-petro-navy text-slate-300">
+      <FooterBrandMark />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-14 sm:px-8 lg:px-12 lg:pt-16 2xl:px-16">
         <Reveal>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Brand & Intro */}
@@ -188,7 +189,7 @@ export function Footer() {
           </p>
         </div>
       </div>
-      <FooterWordmark />
+      <FooterThread />
     </footer>
   );
 }
