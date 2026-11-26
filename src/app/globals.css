@@ -211,3 +211,20 @@ html.lenis body {
 @media (prefers-reduced-motion: reduce) {
   .banner-kenburns { animation: none; }
 }
+
+/* Footer wordmark: light-blue thread shimmer */
+.footer-thread::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, #f0f5f7, transparent);
+  animation: thread-run 5s ease-in-out infinite;
+}
+@keyframes thread-run {
+  0% { transform: translateX(-120%); }
+  60%, 100% { transform: translateX(420%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-thread::after { animation: none; display: none; }
+}
